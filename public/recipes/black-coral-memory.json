@@ -1,0 +1,49 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.12",
+  "layers": [
+    {
+      "id": "chromaticburn",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "burn": 30,
+        "phase": 25,
+        "contamination": 65,
+        "separation": 0,
+        "halo": 0
+      }
+    },
+    {
+      "id": "dendrite",
+      "params": {
+        "brightness": 0,
+        "contrast": 115,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 155,
+        "mix": 100,
+        "seed": 17,
+        "growth": 180,
+        "seeds": 28,
+        "scale": 160,
+        "eta": 70,
+        "memory": 20,
+        "width": 100,
+        "taper": 60,
+        "shift": 35,
+        "relief": 60,
+        "ghost": 12,
+        "paper": 2
+      }
+    }
+  ]
+}

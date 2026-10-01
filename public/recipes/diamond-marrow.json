@@ -1,0 +1,34 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.12",
+  "layers": [
+    {
+      "id": "porous",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 150,
+        "mix": 100,
+        "seed": 17,
+        "cells": 6,
+        "morph": 85,
+        "wall": 40,
+        "depth": 160,
+        "tilt": 25,
+        "cut": 20,
+        "warp": 140,
+        "angle": 110,
+        "light": 120,
+        "shadow": 65,
+        "relief": 85,
+        "texture": 0,
+        "shift": 30,
+        "paper": 97
+      }
+    }
+  ]
+}

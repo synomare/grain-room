@@ -1,0 +1,57 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.12",
+  "layers": [
+    {
+      "id": "wavebrdf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "depth": 360,
+        "pitch": 1850,
+        "coherence": 25,
+        "profile": 35,
+        "relief": 30,
+        "angle": 60,
+        "light": 20,
+        "cross": 100,
+        "metal": 85,
+        "exposure": 240
+      }
+    },
+    {
+      "id": "porous",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cells": 8,
+        "morph": 165,
+        "wall": 45,
+        "depth": 75,
+        "tilt": 90,
+        "cut": 70,
+        "warp": 130,
+        "angle": 45,
+        "light": 120,
+        "shadow": 60,
+        "relief": 65,
+        "texture": 50,
+        "shift": 30,
+        "paper": 98
+      }
+    }
+  ]
+}

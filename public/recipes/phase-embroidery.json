@@ -1,0 +1,45 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.9",
+  "layers": [
+    {
+      "id": "sharpflow",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "length": 370,
+        "radius": 60,
+        "strokes": 5,
+        "angle": 120,
+        "follow": 65
+      }
+    },
+    {
+      "id": "phasorweave",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 105,
+        "domains": 18,
+        "angle": 0,
+        "disorder": 15,
+        "width": 140,
+        "relief": 0,
+        "paper": 98
+      }
+    }
+  ]
+}

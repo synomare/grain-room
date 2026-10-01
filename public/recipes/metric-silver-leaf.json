@@ -1,0 +1,52 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "wavebrdf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "depth": 360,
+        "pitch": 1850,
+        "coherence": 25,
+        "profile": 35,
+        "relief": 30,
+        "angle": 60,
+        "light": 20,
+        "cross": 100,
+        "metal": 85,
+        "exposure": 240
+      }
+    },
+    {
+      "id": "metametric",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 18,
+        "pull": 100,
+        "anchors": 3,
+        "follow": 80,
+        "cut": 40,
+        "sharpness": 120,
+        "relief": 35,
+        "light": 135,
+        "paper": 98
+      }
+    }
+  ]
+}

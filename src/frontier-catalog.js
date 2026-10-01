@@ -1,0 +1,8 @@
+export function frontierFilters(f,c){
+ const add=(value,title,url,note)=>({...value,frontier:true,research:{title,url,note}});
+ return [
+ add(f('sharpflow','鋭流筆','SHARP FLUID BRUSH','研究室','写真の面を筆で押し分ける。局所の色が長い尖端と巻き返しへ変わる。',{length:420,radius:55,strokes:9,angle:30,follow:65},[c('length','筆を動かす距離',0,700),c('radius','筆の半径',0,120),c('strokes','筆の数',0,18),c('angle','筆の向き',0,360,1,'°'),c('follow','輪郭への追従',0,100)],true,true),'Mixwell / James & James, SIGGRAPH 2026','https://dougjam.github.io/mixwell-2026/','公開MIT実装のMixwell brush行列と適応中点積分をJavaScriptへ移植。写真由来の配置・方向を追加。最大720pxの逆座標場から元画像を採取します。Newton解法・GPU版・論文全体の再現ではありません。'),
+ add(f('deposition','侵入する顔料','PIGMENT INTRUSION','研究室','色材を注入するたび、すでにある像を押しのける。層が曲がり、異物のような厚みを持つ。',{drops:64,radius:30,length:28,cross:80,texture:90,gloss:55},[c('drops','注入する回数',0,80),c('radius','顔料の厚み',0,60),c('length','注入線の長さ',0,400),c('cross','方向の交差',0,100),c('texture','写真の混入',0,100),c('gloss','縁の光沢',0,100)],true,true),'Inverse Digital Marbling / Liu et al., 2026 preprint','https://arxiv.org/abs/2609.08722v1','2026年9月のプレプリントのカプセル挿入と面積座標を独立実装。注入域の外で面積を保つ写像を逆順に合成します。色材の配置・写真の混入・照明は独自。画像から操作列を学習する逆問題やreplay adjointは未実装です。'),
+ add(f('transport','像の密度織り','DENSITY WEAVE','研究室','均等な面を写真の密度へ運ぶ。色の格子が局所へ凝集し、空白が引き伸ばされる。',{pull:125,focus:220,mesh:50,open:0,relief:35,paper:2},[c('pull','運ぶ強さ',0,220),c('focus','密度の集中',50,350),c('mesh','織り目の数',10,70),c('open','織り目を開く',0,90),c('relief','面のふくらみ',0,100),c('paper','下地の明るさ',0,100)],true,false),'Linear-Time Transport with Rectified Flows / Do et al., SIGGRAPH 2025','https://perso.liris.cnrs.fr/david.coeurjolly/publication/rectflow-25/','密度と一次モーメントの積分表からrectified flowを計算し、格子点を移送。写真を張ったメッシュ、開口と照明は独自表現。有限96ステップの中点積分で、厳密な最適輸送解や学習モデルではありません。'),
+ ];
+}

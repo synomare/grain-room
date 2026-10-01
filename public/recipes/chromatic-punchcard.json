@@ -1,0 +1,50 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "softcells",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cells": 130,
+        "stretch": 80,
+        "reach": 110,
+        "hardness": 80,
+        "disorder": 15,
+        "fit": 15,
+        "membrane": 0,
+        "texture": 0
+      }
+    },
+    {
+      "id": "inksearch",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 140,
+        "mix": 100,
+        "seed": 17,
+        "density": 6,
+        "time": 80,
+        "structure": 100,
+        "ink": 80,
+        "form": 3,
+        "spread": 115,
+        "angle": 25,
+        "register": 35,
+        "paper": 100
+      }
+    }
+  ]
+}

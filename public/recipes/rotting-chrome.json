@@ -1,0 +1,56 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "wavebrdf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "depth": 360,
+        "pitch": 1800,
+        "coherence": 15,
+        "profile": 35,
+        "relief": 20,
+        "angle": 60,
+        "light": 15,
+        "cross": 100,
+        "metal": 85,
+        "exposure": 270
+      }
+    },
+    {
+      "id": "fungal",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 55,
+        "scale": 180,
+        "colonies": 25,
+        "balance": 75,
+        "moisture": 68,
+        "defense": 30,
+        "fiber": 85,
+        "erosion": 45,
+        "rings": 15,
+        "stain": 55,
+        "relief": 65,
+        "shift": 75,
+        "paper": 2
+      }
+    }
+  ]
+}

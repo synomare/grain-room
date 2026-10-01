@@ -1,0 +1,8 @@
+export function structureFilters(f,c){
+ const add=(v,title,url,note)=>({...v,structure:true,research:{title,url,note}});
+ return [
+ add(f('ribbons','色の靭帯','CHROMATIC TENDONS','線と面','写真の輪郭に沿って、色を長い帯へ編み直す。細い筋と厚い束が像を横断する。',{length:170,spacing:11,width:80,follow:90,paper:8},[c('length','帯の長さ',30,350),c('spacing','帯の間隔',5,25),c('width','帯の太さ',15,140),c('follow','輪郭への追従',0,100),c('paper','下地の明るさ',0,100)],true,true),'Flow-Based Image Abstraction / Kang et al., 2009','https://pages.cs.wisc.edu/~dyer/cs534/papers/kang_tvcg09.pdf','輪郭の流れに沿う処理を参照。構造テンソルの接線を積分し、写真から拾った色で帯を描く独自実装です。論文のETF反復・FDoG・bilateral abstractionの再現ではありません。'),
+ add(f('fault','断層硝子','FAULT GLASS','線と面','写真の密度に合わせて面を分け、割れ目の内側へ光と像を閉じ込める。',{cells:150,relax:7,fracture:110,gap:12,bevel:80},[c('cells','破片の数',40,600),c('relax','面を整える回数',0,12),c('fracture','像の断裂',0,140),c('gap','亀裂の幅',0,100),c('bevel','切り口の光',0,100)],true,true),'Weighted Voronoi Stippling / Secord, 2002','https://www.cs.ubc.ca/labs/imager/tr/pdf/secord.2002b.pdf','画像に応じた密度場と重み付きLloyd緩和を参照。点描を作る代わりにセルを写真の破片として用い、変位と切り口の照明を追加。素材の破壊力学ではありません。'),
+ add(f('gradientcast','勾配鋳造','GRADIENT CAST','線と面','明暗の変化を捻り、像をもう一度解き直す。写真の表面に、別の起伏が現れる。',{amount:85,turn:75,detail:55,relief:75,light:135},[c('amount','鋳造の強さ',0,100),c('turn','勾配を捻る量',0,140),c('detail','細部の持ち上げ',0,100),c('relief','面の起伏',0,100),c('light','光の向き',0,360,1,'°')],true,true),'Gradient Domain HDR Compression / Fattal et al., 2002','https://www.cs.jhu.edu/~misha/ReadingSeminar/Papers/Fattal02.pdf','変更した勾配からPoisson方程式で画像を再構成する発想を参照。ここでは位置依存の勾配回転とscreened Poisson、共役勾配法を使う独自の浮彫処理。HDR圧縮や論文の多尺度減衰の再現ではありません。'),
+ ];
+}

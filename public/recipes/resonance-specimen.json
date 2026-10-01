@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.11",
+  "layers": [
+    {
+      "id": "resonant",
+      "params": {
+        "brightness": 0,
+        "contrast": 140,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 170,
+        "mix": 100,
+        "seed": 17,
+        "time": 140,
+        "frequency": 52,
+        "growth": 18,
+        "memory": 145,
+        "lock": 15,
+        "resonance": 180,
+        "stretch": 5,
+        "angle": 40,
+        "balance": 0,
+        "edge": 100,
+        "relief": 0,
+        "shift": 60,
+        "paper": 98
+      }
+    }
+  ]
+}

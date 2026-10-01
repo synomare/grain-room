@@ -1,0 +1,44 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.8",
+  "layers": [
+    {
+      "id": "deposition",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "drops": 70,
+        "radius": 36,
+        "length": 15,
+        "cross": 80,
+        "texture": 100,
+        "gloss": 40
+      }
+    },
+    {
+      "id": "sharpflow",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "length": 430,
+        "radius": 65,
+        "strokes": 6,
+        "angle": 55,
+        "follow": 30
+      }
+    }
+  ]
+}

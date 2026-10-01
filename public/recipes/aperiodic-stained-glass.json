@@ -1,0 +1,49 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.11",
+  "layers": [
+    {
+      "id": "chromaticburn",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "burn": 28,
+        "phase": 12,
+        "contamination": 65,
+        "separation": 0,
+        "halo": 0
+      }
+    },
+    {
+      "id": "quasicut",
+      "params": {
+        "brightness": 0,
+        "contrast": 145,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 150,
+        "mix": 100,
+        "seed": 17,
+        "symmetry": 5,
+        "size": 60,
+        "angle": 15,
+        "gap": 4,
+        "turn": 25,
+        "aperture": 0,
+        "texture": 10,
+        "scatter": 70,
+        "zoom": 135,
+        "relief": 0,
+        "paper": 3
+      }
+    }
+  ]
+}

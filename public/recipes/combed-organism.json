@@ -1,0 +1,50 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.10",
+  "layers": [
+    {
+      "id": "spinodal",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 170,
+        "mix": 100,
+        "seed": 17,
+        "age": 150,
+        "scale": 25,
+        "memory": 20,
+        "balance": 5,
+        "stretch": 24,
+        "shear": 20,
+        "angle": 35,
+        "edge": 100,
+        "relief": 0,
+        "displace": 25,
+        "texture": 0,
+        "paper": 98
+      }
+    },
+    {
+      "id": "marble",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pull": 250,
+        "passes": 3,
+        "spacing": 240,
+        "angle": 90,
+        "swirl": 90
+      }
+    }
+  ]
+}

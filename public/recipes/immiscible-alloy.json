@@ -1,0 +1,55 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.10",
+  "layers": [
+    {
+      "id": "spinodal",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "age": 125,
+        "scale": 27,
+        "memory": 30,
+        "balance": 5,
+        "stretch": 24,
+        "shear": 20,
+        "angle": 35,
+        "edge": 90,
+        "relief": 45,
+        "displace": 25,
+        "texture": 0,
+        "paper": 80
+      }
+    },
+    {
+      "id": "wavebrdf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "depth": 260,
+        "pitch": 2250,
+        "coherence": 35,
+        "profile": 35,
+        "relief": 55,
+        "angle": 40,
+        "light": 75,
+        "cross": 100,
+        "metal": 90,
+        "exposure": 190
+      }
+    }
+  ]
+}

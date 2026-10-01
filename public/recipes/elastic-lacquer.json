@@ -1,0 +1,47 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "chromaticburn",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "burn": 38,
+        "phase": 22,
+        "contamination": 65,
+        "separation": 15,
+        "halo": 0
+      }
+    },
+    {
+      "id": "metametric",
+      "params": {
+        "brightness": 0,
+        "contrast": 135,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 165,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 45,
+        "pull": 165,
+        "anchors": 7,
+        "follow": 95,
+        "cut": 110,
+        "sharpness": 110,
+        "relief": 35,
+        "light": 135,
+        "paper": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.9",
+  "layers": [
+    {
+      "id": "steergrain",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 14,
+        "direction": 95,
+        "angle": 0,
+        "relief": 45,
+        "displace": 15,
+        "light": 225
+      }
+    },
+    {
+      "id": "thinfilm",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "thickness": 540,
+        "relief": 40,
+        "light": 110,
+        "metal": 58
+      }
+    }
+  ]
+}

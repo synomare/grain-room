@@ -1,0 +1,44 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.8",
+  "layers": [
+    {
+      "id": "transport",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pull": 175,
+        "focus": 270,
+        "mesh": 60,
+        "open": 0,
+        "relief": 0,
+        "paper": 2
+      }
+    },
+    {
+      "id": "sharpflow",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "length": 340,
+        "radius": 65,
+        "strokes": 5,
+        "angle": 50,
+        "follow": 65
+      }
+    }
+  ]
+}

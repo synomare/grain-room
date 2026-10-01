@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.10",
+  "layers": [
+    {
+      "id": "spinodal",
+      "params": {
+        "brightness": 0,
+        "contrast": 130,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 180,
+        "mix": 100,
+        "seed": 17,
+        "age": 150,
+        "scale": 25,
+        "memory": 12,
+        "balance": 10,
+        "stretch": 5,
+        "shear": 50,
+        "angle": 35,
+        "edge": 100,
+        "relief": 0,
+        "displace": 0,
+        "texture": 0,
+        "paper": 99
+      }
+    }
+  ]
+}

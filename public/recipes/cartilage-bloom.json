@@ -1,0 +1,46 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.9",
+  "layers": [
+    {
+      "id": "softcells",
+      "params": {
+        "brightness": 0,
+        "contrast": 145,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 150,
+        "mix": 100,
+        "seed": 17,
+        "cells": 170,
+        "stretch": 95,
+        "reach": 140,
+        "hardness": 70,
+        "disorder": 15,
+        "fit": 25,
+        "membrane": 20,
+        "texture": 0
+      }
+    },
+    {
+      "id": "sharpflow",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "length": 480,
+        "radius": 75,
+        "strokes": 5,
+        "angle": 115,
+        "follow": 50
+      }
+    }
+  ]
+}

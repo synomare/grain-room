@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.DS_Store
+.env*
+!.env.example
+# Local development history; public documentation is maintained separately.
+/*.md
+!README.md
+!ASSETS.md
+/recipes/
+/flow-prism.recipe.json

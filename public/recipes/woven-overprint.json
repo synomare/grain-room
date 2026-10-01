@@ -1,0 +1,64 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.9",
+  "layers": [
+    {
+      "id": "chromaticburn",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "burn": 45,
+        "phase": 30,
+        "contamination": 65,
+        "separation": 25,
+        "halo": 0
+      }
+    },
+    {
+      "id": "gaborcloth",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cells": 650,
+        "size": 48,
+        "stretch": 95,
+        "frequency": 19,
+        "cross": 45,
+        "scatter": 55,
+        "etch": 95,
+        "paper": 98
+      }
+    },
+    {
+      "id": "palimpsest",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "passes": 2,
+        "dislocation": 22,
+        "rotation": 10,
+        "transfer": 35,
+        "erosion": 45
+      }
+    }
+  ]
+}

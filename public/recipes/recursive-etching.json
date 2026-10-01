@@ -1,0 +1,48 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.10",
+  "layers": [
+    {
+      "id": "hyperbolic",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "order": 4,
+        "junction": 5,
+        "space": 1,
+        "zoom": 130,
+        "travel": 45,
+        "angle": 55,
+        "crop": 75,
+        "paper": 98
+      }
+    },
+    {
+      "id": "phasorweave",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 75,
+        "domains": 20,
+        "angle": 0,
+        "disorder": 15,
+        "width": 145,
+        "relief": 0,
+        "paper": 98
+      }
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.12",
+  "layers": [
+    {
+      "id": "dendrite",
+      "params": {
+        "brightness": 0,
+        "contrast": 140,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 170,
+        "mix": 100,
+        "seed": 17,
+        "growth": 180,
+        "seeds": 18,
+        "scale": 170,
+        "eta": 170,
+        "memory": 70,
+        "width": 65,
+        "taper": 80,
+        "shift": 55,
+        "relief": 0,
+        "ghost": 0,
+        "paper": 98
+      }
+    }
+  ]
+}

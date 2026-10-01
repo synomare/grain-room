@@ -1,0 +1,61 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.8",
+  "layers": [
+    {
+      "id": "deposition",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "drops": 65,
+        "radius": 24,
+        "length": 35,
+        "cross": 80,
+        "texture": 90,
+        "gloss": 20
+      }
+    },
+    {
+      "id": "marble",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pull": 160,
+        "passes": 2,
+        "spacing": 220,
+        "angle": 95,
+        "swirl": 65
+      }
+    },
+    {
+      "id": "thinfilm",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "thickness": 280,
+        "relief": 55,
+        "light": 120,
+        "metal": 92
+      }
+    }
+  ]
+}

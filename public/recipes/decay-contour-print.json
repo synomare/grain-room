@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "fungal",
+      "params": {
+        "brightness": 0,
+        "contrast": 170,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "mono",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 45,
+        "scale": 180,
+        "colonies": 30,
+        "balance": 100,
+        "moisture": 65,
+        "defense": 45,
+        "fiber": 95,
+        "erosion": 45,
+        "rings": 28,
+        "stain": 150,
+        "relief": 0,
+        "shift": 90,
+        "paper": 98
+      }
+    }
+  ]
+}

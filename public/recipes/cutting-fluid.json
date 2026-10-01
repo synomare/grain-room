@@ -1,0 +1,43 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.8",
+  "layers": [
+    {
+      "id": "chromaticburn",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "burn": 25,
+        "phase": 12,
+        "contamination": 65,
+        "separation": 20,
+        "halo": 0
+      }
+    },
+    {
+      "id": "sharpflow",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "length": 620,
+        "radius": 72,
+        "strokes": 12,
+        "angle": 125,
+        "follow": 80
+      }
+    }
+  ]
+}

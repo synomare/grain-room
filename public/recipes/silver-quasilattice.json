@@ -1,0 +1,54 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.11",
+  "layers": [
+    {
+      "id": "wavebrdf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "depth": 310,
+        "pitch": 1850,
+        "coherence": 25,
+        "profile": 35,
+        "relief": 30,
+        "angle": 60,
+        "light": 20,
+        "cross": 100,
+        "metal": 90,
+        "exposure": 270
+      }
+    },
+    {
+      "id": "quasicut",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "symmetry": 4,
+        "size": 55,
+        "angle": 15,
+        "gap": 4,
+        "turn": 30,
+        "aperture": 75,
+        "texture": 90,
+        "scatter": 25,
+        "zoom": 135,
+        "relief": 60,
+        "paper": 97
+      }
+    }
+  ]
+}

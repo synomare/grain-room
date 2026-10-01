@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "inksearch",
+      "params": {
+        "brightness": 0,
+        "contrast": 135,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 160,
+        "mix": 100,
+        "seed": 17,
+        "density": 7,
+        "time": 75,
+        "structure": 80,
+        "ink": 135,
+        "form": 2,
+        "spread": 85,
+        "angle": 0,
+        "register": 45,
+        "paper": 0
+      }
+    }
+  ]
+}

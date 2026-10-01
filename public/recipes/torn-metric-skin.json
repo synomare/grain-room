@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.13",
+  "layers": [
+    {
+      "id": "metametric",
+      "params": {
+        "brightness": 0,
+        "contrast": 145,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 160,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 24,
+        "pull": 130,
+        "anchors": 5,
+        "follow": 130,
+        "cut": 95,
+        "sharpness": 130,
+        "relief": 0,
+        "light": 135,
+        "paper": 98
+      }
+    }
+  ]
+}
