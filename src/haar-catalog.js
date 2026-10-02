@@ -1,0 +1,3 @@
+export const haarFilters=(f,c)=>[
+ {...f('haar','ずれる色階','HAAR COLOR STRATA','再構成','写真を大小の差分へほどき、向きと位置を階層ごとに組み替える。細部を残した色面が方形の段差になる。',{scale:4,depth:3,shift:55,turn:45,split:25,gain:150,cut:10,texture:100},[c('scale','組み替える大きさ',1,8),c('depth','重ねる階層',1,4),c('shift','差分を運ぶ距離',0,100),c('turn','縦横の組み替え',0,100),c('split','色層の離れ',0,100),c('gain','差分の強さ',0,250),c('cut','小さな差分を除く',0,100),c('texture','細部の残り',0,100)],true,true),haar:true,research:{title:'Stollnitz, DeRose & Salesin — Haar wavelets (1995)',url:'https://graphics.stanford.edu/courses/cs148-10-summer/docs/1995--stollnitz_derose_salesin--wavelets_for_graphics_1.pdf',note:'Part 1の3.1、二次元Haar分解を参照。差分帯の移動・方向混合・色分離は独自の再構成。圧縮器の実装ではありません。変換場は長辺512px、原寸の細部を再合成します。'}},
+];

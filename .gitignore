@@ -9,3 +9,10 @@ dist/
 !ASSETS.md
 /recipes/
 /flow-prism.recipe.json
+
+!CRYSTALS.md
+!PHOTOELASTIC.md
+
+!NEWTON.md
+!RADON.md
+!HAAR.md

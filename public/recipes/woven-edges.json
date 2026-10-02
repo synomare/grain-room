@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.18",
+  "layers": [
+    {
+      "id": "haar",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "scale": 2,
+        "depth": 3,
+        "shift": 20,
+        "turn": 65,
+        "split": 0,
+        "gain": 165,
+        "cut": 12,
+        "texture": 100
+      }
+    }
+  ]
+}

@@ -1,3 +1,8 @@
+import {haarFilters} from './haar-catalog.js';
+import {radonFilters} from './radon-catalog.js';
+import {newtonFilters} from './newton-catalog.js';
+import {photoelasticFilters} from './photoelastic-catalog.js';
+import {crystalFilters} from './crystal-catalog.js';
 import {adaptiveFilters} from './adaptive-catalog.js';
 import {volumeFilters} from './volume-catalog.js';
 import {aperiodicFilters} from './aperiodic-catalog.js';
@@ -14,6 +19,11 @@ const c=(key,label,min,max,step=1,suffix='')=>[key,label,min,max,step,suffix];
 const f=(id,name,en,group,description,defaults={},controls=[],featured=false,random=false)=>({id,name,en,group,description,defaults:{...common,...defaults},controls,featured,random});
 export const groups=['線と面','再構成','物質','研究室','すべて','注目','印刷','流動','構造','光・色','記号'];
 export const filters=[
+...haarFilters(f,c),
+...radonFilters(f,c),
+...newtonFilters(f,c),
+...photoelasticFilters(f,c),
+...crystalFilters(f,c),
 ...adaptiveFilters(f,c),
 ...volumeFilters(f,c),
 ...aperiodicFilters(f,c),

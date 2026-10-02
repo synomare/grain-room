@@ -4,7 +4,7 @@ import {dct1,dct2,halftoneLossGradient,optimizeHalftone,gaussianSelection,gaussi
 import {metricStretch,rescaledNoise} from '../src/adaptive-texture.js';
 import {decayDiffusion,evolveDecay,moistureActivity} from '../src/adaptive-decay.js';
 import {makeLayer} from '../src/filters.js';
-import {encodeRecipe,decodeRecipe} from '../src/recipes.js';
+import {encodeRecipe,decodeRecipe,ENGINE_VERSION} from '../src/recipes.js';
 const near=(a,b,e=1e-7)=>assert.ok(Math.abs(a-b)<e,`${a} != ${b}`);
 test('orthonormal DCT agrees with direct cosine reference and its inverse',()=>{
  const n=16,a=Float64Array.from({length:n},(_,i)=>Math.sin(i*.53)),b=dct1(a);
@@ -38,6 +38,6 @@ test('six-field decay stays bounded, consumes substrate, and separates white fro
  assert.ok(white.Hl.some(v=>v<.9));assert.ok(brown.Hl.every(v=>v===1));assert.ok(brown.Hc.some(v=>v<.9));assert.deepEqual(white,evolveDecay(w,h,photo,{...opts,balance:1}));
 });
 test('adaptive recipes round trip and previous volume recipes load with their original engine tag',()=>{
- for(const id of ['inksearch','metametric','fungal']){const layers=[makeLayer(id)],r=JSON.parse(encodeRecipe(layers));assert.equal(r.engine,'0.13');assert.deepEqual(decodeRecipe(JSON.stringify(r)),layers);r.engine='0.12';assert.throws(()=>decodeRecipe(JSON.stringify(r)));}
+ for(const id of ['inksearch','metametric','fungal']){const layers=[makeLayer(id)],r=JSON.parse(encodeRecipe(layers));assert.equal(r.engine,ENGINE_VERSION);assert.deepEqual(decodeRecipe(JSON.stringify(r)),layers);r.engine='0.12';assert.throws(()=>decodeRecipe(JSON.stringify(r)));}
  for(const id of ['porous','dendrite','quasicut','sharpflow']){const r=JSON.parse(encodeRecipe([makeLayer(id)]));r.engine='0.12';assert.equal(decodeRecipe(JSON.stringify(r))[0].id,id);}
 });

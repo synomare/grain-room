@@ -1,0 +1,37 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.14",
+  "layers": [
+    {
+      "id": "crystallize",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 140,
+        "scale": 144,
+        "nuclei": 12,
+        "cold": 95,
+        "follow": 90,
+        "anisotropy": 90,
+        "symmetry": 6,
+        "angle": 25,
+        "latent": 35,
+        "rings": 9,
+        "etch": 15,
+        "refract": 85,
+        "relief": 0,
+        "rim": 0,
+        "ghost": 0,
+        "paper": 98,
+        "light": 135
+      }
+    }
+  ]
+}

@@ -1,3 +1,8 @@
+import {haar} from './haar.js';
+import {radon} from './radon.js';
+import {newton} from './newton.js';
+import {photoelastic} from './photoelastic.js';
+import {crystallize} from './crystal-growth.js';
 import {inksearch} from './adaptive-halftone.js';
 import {metametric} from './adaptive-texture.js';
 import {fungal} from './adaptive-decay.js';
@@ -51,7 +56,7 @@ export function applyFilter(rgba,w,h,layer){
    for(let i=0;i<a.length;i+=4){out[i+c]=pixels[i];out[i+3]=255;}
    if(p.colorMode==='mono'){for(let i=0;i<a.length;i+=4)out[i+1]=out[i+2]=out[i];break;}
   }
- }else out=id==='mono'?a:definition.adaptive?({inksearch,metametric,fungal})[id](a,w,h,p):definition.volume?({porous,dendrite})[id](a,w,h,p):definition.aperiodic?({quasicut,waveweft,resonant})[id](a,w,h,p):definition.emergent?({hyperbolic,spinodal,wavebrdf})[id](a,w,h,p):definition.microstructure?({softcells,steergrain,gaborcloth,phasorweave})[id](a,w,h,p):definition.frontier?({sharpflow,deposition,transport})[id](a,w,h,p):definition.field?({marble,accrete})[id](a,w,h,p):definition.structure?structureTransform(a,w,h,id,p):definition.reconstruction?reconstructionTransform(a,w,h,id,p):definition.material?materialTransform(a,w,h,id,p):definition.research?researchTransform(a,w,h,id,p):transform(a,w,h,id,p);
+ }else out=id==='mono'?a:definition.haar?haar(a,w,h,p):definition.radon?radon(a,w,h,p):definition.newton?newton(a,w,h,p):definition.photoelastic?photoelastic(a,w,h,p):definition.crystal?crystallize(a,w,h,p):definition.adaptive?({inksearch,metametric,fungal})[id](a,w,h,p):definition.volume?({porous,dendrite})[id](a,w,h,p):definition.aperiodic?({quasicut,waveweft,resonant})[id](a,w,h,p):definition.emergent?({hyperbolic,spinodal,wavebrdf})[id](a,w,h,p):definition.microstructure?({softcells,steergrain,gaborcloth,phasorweave})[id](a,w,h,p):definition.frontier?({sharpflow,deposition,transport})[id](a,w,h,p):definition.field?({marble,accrete})[id](a,w,h,p):definition.structure?structureTransform(a,w,h,id,p):definition.reconstruction?reconstructionTransform(a,w,h,id,p):definition.material?materialTransform(a,w,h,id,p):definition.research?researchTransform(a,w,h,id,p):transform(a,w,h,id,p);
  for(let i=0;i<out.length;i+=4){
   // Enforce a real monochrome output, including operators that generate new color.
   if(p.colorMode==='mono'){const l=lum(out,i);out[i]=out[i+1]=out[i+2]=l;}

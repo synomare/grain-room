@@ -1,0 +1,3 @@
+export const radonFilters=(f,c)=>[
+ {...f('radon','投影する色譜','RADON COLOR SCORE','再構成','写真を角度ごとの色の積算へ。色譜、環状の帯、少数の投影から戻る像をつくる。',{views:90,layout:0,angle:20,turns:1,zoom:145,trace:45,exposure:95,paper:100,memory:0},[c('views','投影する方向数',6,180),c('layout','配置：0 色譜／1 環／2 再投影',0,2),c('angle','投影の回転',0,180,1,'°'),c('turns','色譜の反復',1,4),c('zoom','色譜の拡大',60,240),c('trace','細線の強さ',0,100),c('exposure','色の積算',15,180),c('paper','白い下地へ',0,100),c('memory','原画を重ねる',0,70)],true,true),radon:true,research:{title:'Kak & Slaney — Line integrals and backprojection (1988)',url:'https://engineering.purdue.edu/~malcolm/pct/CTI_Ch03.pdf',note:'第3章3.1/3.3の線積分と逆投影を参照。色濃度の離散投影、環状配置、局所高域強調は独自翻案。CT計測や正確な逆変換ではありません。投影場は長辺224px。'}},
+];

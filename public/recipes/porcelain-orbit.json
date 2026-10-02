@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.16",
+  "layers": [
+    {
+      "id": "newton",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "roots": 4,
+        "steps": 28,
+        "relax": 85,
+        "spread": 110,
+        "zoom": 90,
+        "follow": 50,
+        "angle": 70,
+        "bands": 6,
+        "warp": 45,
+        "tint": 35,
+        "hue": 180,
+        "ink": 45,
+        "paper": 100
+      }
+    }
+  ]
+}

@@ -1,11 +1,11 @@
 import {getFilter} from './filters.js';
-export const ENGINE_VERSION='0.13';
+export const ENGINE_VERSION='0.18';
 const commonBounds={brightness:[-60,60],contrast:[30,250],grain:[0,60],saturation:[0,220],mix:[0,100],seed:[0,99999]};
 export function encodeRecipe(layers){return JSON.stringify({app:'grain-room',version:1,engine:ENGINE_VERSION,layers},null,2);}
 export function decodeRecipe(text){
  if(text.length>100000)throw new Error('レシピのサイズが大きすぎます。');
  let data;try{data=JSON.parse(text);}catch{throw new Error('JSONファイルを読み取れませんでした。');}
- if(data.app!=='grain-room'||data.version!==1||!['0.2','0.3','0.4','0.5','0.6','0.7','0.8','0.9','0.10','0.11','0.12',ENGINE_VERSION].includes(data.engine)||!Array.isArray(data.layers)||!data.layers.length||data.layers.length>7)throw new Error('対応するGRAIN ROOMのレシピではありません。');
+ if(data.app!=='grain-room'||data.version!==1||!['0.2','0.3','0.4','0.5','0.6','0.7','0.8','0.9','0.10','0.11','0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)||!Array.isArray(data.layers)||!data.layers.length||data.layers.length>7)throw new Error('対応するGRAIN ROOMのレシピではありません。');
  return data.layers.map(layer=>{
   const f=getFilter(layer?.id);if(!f||!layer.params||typeof layer.params!=='object')throw new Error('レシピに不明な加工が含まれています。');
   if(data.engine==='0.2'&&f.research)throw new Error('この加工は0.3以降のレシピに対応しています。');
@@ -13,12 +13,17 @@ export function decodeRecipe(text){
   if(['0.2','0.3','0.4'].includes(data.engine)&&f.reconstruction)throw new Error('この加工は0.5以降のレシピに対応しています。');
   if(['0.2','0.3','0.4','0.5'].includes(data.engine)&&f.structure)throw new Error('この加工は0.6以降のレシピに対応しています。');
   if(['0.2','0.3','0.4','0.5','0.6'].includes(data.engine)&&f.field)throw new Error('この加工は0.7以降のレシピに対応しています。');
-  if(!['0.8','0.9','0.10','0.11','0.12',ENGINE_VERSION].includes(data.engine)&&f.frontier)throw new Error('この加工は0.8以降のレシピに対応しています。');
-  if(!['0.9','0.10','0.11','0.12',ENGINE_VERSION].includes(data.engine)&&f.microstructure)throw new Error('この加工は0.9以降のレシピに対応しています。');
-  if(!['0.10','0.11','0.12',ENGINE_VERSION].includes(data.engine)&&f.emergent)throw new Error('この加工は0.10以降のレシピに対応しています。');
-  if(!['0.11','0.12',ENGINE_VERSION].includes(data.engine)&&f.aperiodic)throw new Error('この加工は0.11以降のレシピに対応しています。');
-  if(!['0.12',ENGINE_VERSION].includes(data.engine)&&f.volume)throw new Error('この加工は0.12以降のレシピに対応しています。');
-  if(data.engine!==ENGINE_VERSION&&f.adaptive)throw new Error('この加工は0.13以降のレシピに対応しています。');
+  if(!['0.8','0.9','0.10','0.11','0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.frontier)throw new Error('この加工は0.8以降のレシピに対応しています。');
+  if(!['0.9','0.10','0.11','0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.microstructure)throw new Error('この加工は0.9以降のレシピに対応しています。');
+  if(!['0.10','0.11','0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.emergent)throw new Error('この加工は0.10以降のレシピに対応しています。');
+  if(!['0.11','0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.aperiodic)throw new Error('この加工は0.11以降のレシピに対応しています。');
+  if(!['0.12','0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.volume)throw new Error('この加工は0.12以降のレシピに対応しています。');
+  if(!['0.13','0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.adaptive)throw new Error('この加工は0.13以降のレシピに対応しています。');
+  if(!['0.14','0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.crystal)throw new Error('この加工は0.14以降のレシピに対応しています。');
+  if(!['0.15','0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.photoelastic)throw new Error('この加工は0.15以降のレシピに対応しています。');
+  if(!['0.16','0.17',ENGINE_VERSION].includes(data.engine)&&f.newton)throw new Error('この加工は0.16以降のレシピに対応しています。');
+  if(!['0.17',ENGINE_VERSION].includes(data.engine)&&f.radon)throw new Error('この加工は0.17以降のレシピに対応しています。');
+  if(data.engine!==ENGINE_VERSION&&f.haar)throw new Error('この加工は0.18以降のレシピに対応しています。');
   const p={...f.defaults},bounds={...commonBounds,...Object.fromEntries(f.controls.map(([key,,min,max])=>[key,[min,max]]))};
   for(const [key,value] of Object.entries(layer.params)){
    if(!Object.hasOwn(p,key))throw new Error('レシピに不明な設定があります。');

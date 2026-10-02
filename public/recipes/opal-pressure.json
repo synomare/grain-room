@@ -1,0 +1,30 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.15",
+  "layers": [
+    {
+      "id": "photoelastic",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pressure": 45,
+        "spread": 65,
+        "anchors": 4,
+        "follow": 55,
+        "thickness": 90,
+        "angle": 65,
+        "circular": 100,
+        "backing": 100,
+        "dye": 55,
+        "warp": 15
+      }
+    }
+  ]
+}
