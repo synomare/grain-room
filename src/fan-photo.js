@@ -1,0 +1,10 @@
+import{rasterRender}from'./raster-relief.js';
+export const fanPhotoDefaults={pleats:12,open:220,hub:18,depth:28,tilt:20,turn:-12,fit:94,light:65,paper:96,lift:0};
+export function fanRay(k,p){const n=p.pleats*2,a=(k/n-.5)*p.open*Math.PI/180-Math.PI/2,b=p.depth*.35*Math.PI/180;return[Math.cos(a)*Math.cos(b),Math.sin(a)*Math.cos(b),Math.sin(b)*(k%2?-1:1)];}
+export function fanPoint(face,u,v,p){const A=fanRay(face,p),B=fanRay(face+1,p),r=p.hub/100+(1-v)*(1-p.hub/100);return A.map((a,i)=>r*(a+(B[i]-a)*u));}
+export function fanMesh(w,h,p){const n=p.pleats*2,vertices=[],indices=[],ang=p.turn*Math.PI/180,tilt=p.tilt*Math.PI/180,ca=Math.cos(ang),sa=Math.sin(ang),cb=Math.cos(tilt),sb=Math.sin(tilt),rot=([x,y,z])=>{const X=x*ca-y*sa,Y=x*sa+y*ca;return[X,Y*cb-z*sb,Y*sb+z*cb];},cols=Math.max(2,Math.min(32,Math.ceil(w/n/8))),rows=Math.max(8,Math.min(256,Math.ceil(h/10)));let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+ for(let face=0;face<n;face++){const A=fanRay(face,p),B=fanRay(face+1,p),cross=[A[1]*B[2]-A[2]*B[1],A[2]*B[0]-A[0]*B[2],A[0]*B[1]-A[1]*B[0]],len=Math.hypot(...cross),normal=rot(cross.map(x=>x/(len||1))),shade=1+p.light/100*(.25+.85*Math.abs(normal[0]*-.35+normal[1]*-.45+normal[2]*Math.sqrt(.675))-1),start=vertices.length/6;
+  for(let j=0;j<=rows;j++)for(let i=0;i<=cols;i++){const u=i/cols,v=j/rows,P=rot(fanPoint(face,u,v,p));vertices.push(...P,(face+u)/n*w-.5,v*h-.5,shade);minX=Math.min(minX,P[0]);maxX=Math.max(maxX,P[0]);minY=Math.min(minY,P[1]);maxY=Math.max(maxY,P[1]);}
+  for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){const A=start+j*(cols+1)+i,B=A+cols+1;indices.push(A,A+1,B,A+1,B+1,B);}
+ }const scale=Math.min(w/Math.max(1e-8,maxX-minX),h/Math.max(1e-8,maxY-minY))*p.fit/100;for(let i=0;i<vertices.length;i+=6){vertices[i]=(vertices[i]-(minX+maxX)/2)*scale+w/2;vertices[i+1]=(vertices[i+1]-(minY+maxY)/2)*scale+h/2;vertices[i+2]*=scale;}return{vertices:new Float32Array(vertices),indices:new Uint32Array(indices),stride:6,cols,rows,faces:n};}
+export function fanPhoto(a,w,h,q={}){const p={...fanPhotoDefaults,...q};return rasterRender(a,w,h,fanMesh(w,h,p),p,{samples:4});}

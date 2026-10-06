@@ -1,0 +1,4 @@
+import {seamDefaults} from './seam-fold.js';
+export const seamFoldFilters=(f,c)=>[
+ {...f('seamfold','輪郭を詰める','CONTOUR SEAM FOLD','再構成','色の変わり目を避け、写真から曲がる帯を抜く。残った像を広げたり、帯を足して形の比率を変えられます。',seamDefaults,[c('cut','選ぶ帯の量',0,75),c('direction','帯の方向（縦→横）',0,1),c('operation','帯の処理（抜く→足す）',0,1),c('protect','輪郭を残す',0,200),c('join','継ぐ色を近づける',0,100),c('scatter','帯の散り',0,100),c('spread','画面へ広げる',0,100),c('amount','加工の強さ',0,100)],true,true),seamfold:true,research:{title:'Avidan & Shamir (2007); Rubinstein, Shamir & Avidan (2008) — Seam Carving / Forward Energy',url:'https://www.merl.com/publications/TR2008-064',note:'原著の連結した帯の削除と、2008年§5.1の継ぎ直し後の色差を参照した独立翻案。長辺320px以下の参照で1行1セル・隣行±1の帯を動的計画法で選び、毎回の削除後に費用を再計算。残すセルを記録し、写真の原寸から帯の内部を読む。単一帯は現在の費用で最小ですが、繰り返し削除は貪欲で全順序の最適性を保証しません。RGBの差、seedによる小さな費用、帯の複製、同寸への拡大と平均色の余白は独自翻案。原著の動画graphcut・顔認識・保護マスク・最適な縦横順序や、隣接画素平均による挿入は実装しません。細い被写体や直線は曲がり、強い設定では欠けます。原著コード・写真・図版は製品に取り込んでいません。'}},
+];

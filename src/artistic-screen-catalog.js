@@ -1,0 +1,3 @@
+export const artisticScreenFilters=(f,c)=>[
+ {...f('artisticscreen','ひらく鉤版','HOOK SCREEN','印刷','淡い鉤、つながる曲線、紙の切り抜き。明暗に合わせて形を組み替え、近くと遠くで異なる像をつくる。',{size:22,angle:30,transition:50,ink:0,paper:100},[c('size','鉤版の大きさ',8,48),c('angle','版の角度',0,180,1,'°'),c('transition','形が切り替わる濃さ',20,80),c('ink','インクの明るさ',0,40),c('paper','紙の明るさ',60,100)],true,false),artisticscreen:true,research:{title:'Ostromoukhov & Hersch — Artistic Screening (1995)',url:'https://perso.liris.cnrs.fr/ostrom/publications/pdf/SIGGRAPH95_ArtisticScreening.pdf',note:'濃度別に異なる形を持つ非入れ子スクリーンから着想した独自の鉤版。輪郭補間エディターの再現ではありません。セル平均の線形輝度、64×64の図案、回転格子と4×4の画素内サンプル。一色のインクと紙。小さい版では細い穴が消えます。細かい版や低解像度では、濃淡の応答も一部前後することがあります。配置は固定。'}},
+];

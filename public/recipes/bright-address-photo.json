@@ -1,0 +1,35 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.54",
+  "layers": [
+    {
+      "id": "addressrecords",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 30,
+        "select": 0,
+        "threshold": 60,
+        "coverage": 15,
+        "records": 3,
+        "spread": 8,
+        "angle": 0,
+        "originX": 50,
+        "originY": 50,
+        "basis": 2,
+        "mode": 0,
+        "fill": 65,
+        "source": 20,
+        "paper": 97,
+        "text": 86
+      }
+    }
+  ]
+}

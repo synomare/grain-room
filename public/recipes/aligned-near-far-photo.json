@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.60",
+  "layers": [
+    {
+      "id": "hybridimage",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "farCut": 16,
+        "nearCut": 80,
+        "farGain": 70,
+        "nearGain": 90,
+        "farColour": 100,
+        "nearColour": 0,
+        "zoom": 100,
+        "turn": 0,
+        "offsetX": 0,
+        "offsetY": 0,
+        "mirror": 0,
+        "viewBand": 0
+      }
+    }
+  ]
+}

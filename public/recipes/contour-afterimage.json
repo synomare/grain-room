@@ -1,0 +1,25 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "spectraltv",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "scale": 55,
+        "width": 65,
+        "gain": 220,
+        "view": 0,
+        "reveal": 45
+      }
+    }
+  ]
+}

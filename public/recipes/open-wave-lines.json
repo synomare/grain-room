@@ -1,0 +1,34 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "waveweft",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 130,
+        "mix": 100,
+        "seed": 17,
+        "frequency": 15,
+        "band": 3,
+        "crossfreq": 160,
+        "crossband": 400,
+        "waves": 6,
+        "align": 0,
+        "angle": 25,
+        "mode": 3,
+        "bend": 45,
+        "memory": 0,
+        "width": 20,
+        "shift": 20,
+        "texture": 75,
+        "paper": 98
+      }
+    }
+  ]
+}

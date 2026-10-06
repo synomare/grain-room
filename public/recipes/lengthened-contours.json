@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.39",
+  "layers": [
+    {
+      "id": "seamfold",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cut": 62,
+        "direction": 1,
+        "operation": 0,
+        "protect": 100,
+        "join": 100,
+        "scatter": 10,
+        "spread": 100,
+        "amount": 100
+      }
+    }
+  ]
+}

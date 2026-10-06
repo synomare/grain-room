@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.76",
+  "layers": [
+    {
+      "id": "entangledmatter",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "scale": 200,
+        "pressure": 80,
+        "fracture": 70,
+        "depth": 6,
+        "stretch": 80,
+        "relief": 45,
+        "bleach": 15,
+        "spread": 20
+      }
+    }
+  ]
+}

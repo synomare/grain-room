@@ -26,3 +26,12 @@ test('superseded work cannot publish pixels or start fallback work',async()=>{
   const late=await renderBestPreview({render:async()=>{current=false;return {width:6000};}},{width:6000,height:4000},[],previewPlan(6000,4000,8),()=>current);
   assert.equal(late,null);
 });
+test('paired photos share the pixel and edge budget, including a one-pixel primary',()=>{
+ for(const memory of [2,4,8,undefined])for(const [w,h,nw,nh]of [[1,1,6000,4000],[6000,4000,1,1],[9000,1,1,10000],[1024,1536,1600,1067],[6000,4000,6000,4000]]){
+  const p=previewPlan(w,h,memory,{width:nw,height:nh}),s=Math.min(1,p.nearEdge/Math.max(nw,nh)),area=Math.max(1,Math.round(nw*s))*Math.max(1,Math.round(nh*s));assert.ok(p.width*p.height+area<=(memory===2?4e6:memory===4?8e6:memory?24e6:16e6));assert.ok(p.edge<=8192&&p.nearEdge<=8192);assert.ok(p.width<=w&&p.height<=h&&p.nearEdge<=Math.max(nw,nh));
+ }
+ assert.deepEqual(previewPlan(1024,1536,8,{width:1600,height:1067}),{edge:1536,width:1024,height:1536,limited:false,nearEdge:1600});
+});
+test('paired capacity fallback reduces the secondary even when the primary cannot shrink',async()=>{
+ const calls=[],nearImage={width:6000,height:4000},plan=previewPlan(1,1,8,nearImage),r={render:async(_,__,edge,resources)=>{calls.push([edge,resources.nearEdge]);assert.equal(resources.nearImage,nearImage);if(resources.nearEdge>3000)throw Error('capacity');return {width:1};}};const out=await renderBestPreview(r,{width:1,height:1},[],plan,()=>true,{nearImage});assert.ok(calls.length>1);assert.equal(calls[0][0],1);assert.equal(calls.at(-1)[0],1);assert.ok(calls.at(-1)[1]<=3000);assert.equal(out.limited,true);
+});

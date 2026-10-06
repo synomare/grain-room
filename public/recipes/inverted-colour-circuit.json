@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.49",
+  "layers": [
+    {
+      "id": "closedroute",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 22,
+        "follow": 80,
+        "random": 35,
+        "angle": 0,
+        "round": 80,
+        "width": 85,
+        "weight": 0,
+        "gamma": 120,
+        "reverse": 0,
+        "mode": 3,
+        "paper": 100,
+        "lift": 20
+      }
+    }
+  ]
+}

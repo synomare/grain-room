@@ -1,0 +1,27 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "paletteplates",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "component": 1,
+        "position": 25,
+        "hue": 190,
+        "chroma": 65,
+        "tone": 55,
+        "replace": 75,
+        "view": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.67",
+  "layers": [
+    {
+      "id": "colourpeel",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 210,
+        "boundary": 80,
+        "amount": 65,
+        "curl": 145,
+        "direction": 250,
+        "scatter": 65,
+        "paper": 94,
+        "under": 25,
+        "shadow": 60,
+        "light": 315
+      }
+    }
+  ]
+}

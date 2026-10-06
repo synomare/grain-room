@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.47",
+  "layers": [
+    {
+      "id": "curlicue",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "motif": 2,
+        "steps": 1200,
+        "detune": 512,
+        "drift": 0,
+        "angle": 25,
+        "width": 1.1,
+        "copies": 12,
+        "ink": 100,
+        "zoom": 140,
+        "mode": 0,
+        "photo": 0,
+        "paper": 0,
+        "amount": 100
+      }
+    }
+  ]
+}

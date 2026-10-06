@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.33",
+  "layers": [
+    {
+      "id": "specklefield",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 22,
+        "surface": 8,
+        "roughness": 90,
+        "spread": 60,
+        "stretch": 15,
+        "angle": 35,
+        "amount": 90,
+        "structure": 35,
+        "color": 90
+      }
+    }
+  ]
+}

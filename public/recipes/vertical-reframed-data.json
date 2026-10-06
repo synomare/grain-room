@@ -1,0 +1,26 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.47",
+  "layers": [
+    {
+      "id": "rowreinterpret",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "delta": -1,
+        "layout": 0,
+        "axis": 1,
+        "offset": 0,
+        "reverse": 0,
+        "amount": 100
+      }
+    }
+  ]
+}

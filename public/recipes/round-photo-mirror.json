@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.64",
+  "layers": [
+    {
+      "id": "photomirrors",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "shape": 0,
+        "copies": 1,
+        "size": 92,
+        "aspect": 115,
+        "bulge": 100,
+        "hole": 36,
+        "turn": -12,
+        "yaw": 0,
+        "pitch": 0,
+        "zoom": 100,
+        "paper": 96,
+        "background": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.32",
+  "layers": [
+    {
+      "id": "glyphcontours",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 18,
+        "detail": 20,
+        "prune": 75,
+        "relax": 70,
+        "passes": 3,
+        "weight": 100,
+        "paper": 0,
+        "color": 65,
+        "alphabet": 0,
+        "characters": "|/\\_()[]{}-+"
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.61",
+  "layers": [
+    {
+      "id": "rasterrelief",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "spacing": 7,
+        "band": 45,
+        "height": 32,
+        "smooth": 5,
+        "gamma": 110,
+        "reverse": 1,
+        "tilt": 40,
+        "turn": 8,
+        "direction": 1,
+        "size": 94,
+        "light": 20,
+        "paper": 95,
+        "lift": 0
+      }
+    }
+  ]
+}

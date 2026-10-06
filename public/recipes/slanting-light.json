@@ -1,0 +1,27 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "pupilpsf",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "spread": 45,
+        "tailX": 18,
+        "tailY": -12,
+        "focus": 4,
+        "astig": 3,
+        "aperture": 100,
+        "light": 65
+      }
+    }
+  ]
+}

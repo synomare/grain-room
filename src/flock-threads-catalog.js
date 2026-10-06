@@ -1,0 +1,4 @@
+import{flockDefaults}from'./flock-threads.js';
+export const flockThreadFilters=(f,c)=>[
+ {...f('flockthreads','群れる色糸','FLOCK COLOUR THREADS','線と面','写真の色を運ぶ糸が近くの糸へ寄り合い、輪郭に沿ってほどける。集まり方と歩く長さで、細線から色の束へ変わります。',flockDefaults,[c('time','歩かせる回数',0,200),c('density','糸の数',10,100),c('radius','近くを見る広さ',10,80),c('align','向きをそろえる',0,100),c('cohesion','集まる強さ',0,100),c('separation','離れる強さ',0,100),c('follow','輪郭へ沿う',0,100),c('width','糸の太さ',.3,5,.05),c('carry','持ち運ぶ色を保つ',0,100),c('photo','写真を残す',0,100),c('paper','下地の明るさ',0,100),c('amount','加工の強さ',0,100)],true,true),flockthreads:true,research:{title:'Craig Reynolds (1987) — Flocks, Herds, and Schools',url:'https://www.red3d.com/cwr/papers/1987/SIGGRAPH87.pdf',note:'原著の近傍による衝突回避・速度の一致・群れの中心へ向かう三つの挙動を参照。二次元・等方的な近傍、重み付き加算と力・速度の上限による独立翻案です。原著の優先順位による挙動配分、視野、三次元の飛行や障害物回避は実装していません。写真の明暗勾配へ沿う力、色の持ち運び、反射する境界と原寸の軌跡描画は独自の加工です。原著のコード・図版を製品へ取り込んでいません。'}},
+];

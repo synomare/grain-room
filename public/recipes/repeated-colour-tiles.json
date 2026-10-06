@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.56",
+  "layers": [
+    {
+      "id": "heatstitches",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cells": 17,
+        "aspect": 0,
+        "flip": 70,
+        "mirror": 3,
+        "dual": 0,
+        "diffusion": 350,
+        "phase": -30,
+        "axes": 0,
+        "repeat": 2,
+        "angle": 0,
+        "retain": 0,
+        "stitches": 0,
+        "width": 2.5
+      }
+    }
+  ]
+}

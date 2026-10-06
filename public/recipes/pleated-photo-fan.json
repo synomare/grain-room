@@ -1,0 +1,30 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.74",
+  "layers": [
+    {
+      "id": "fanphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pleats": 12,
+        "open": 220,
+        "hub": 18,
+        "depth": 28,
+        "tilt": 20,
+        "turn": -12,
+        "fit": 94,
+        "light": 65,
+        "paper": 96,
+        "lift": 0
+      }
+    }
+  ]
+}

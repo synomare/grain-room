@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.43",
+  "layers": [
+    {
+      "id": "flockthreads",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 140,
+        "density": 45,
+        "radius": 50,
+        "align": 80,
+        "cohesion": 65,
+        "separation": 80,
+        "follow": 65,
+        "width": 2.4,
+        "carry": 80,
+        "photo": 20,
+        "paper": 0,
+        "amount": 100
+      }
+    }
+  ]
+}

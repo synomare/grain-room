@@ -1,0 +1,35 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.36",
+  "layers": [
+    {
+      "id": "watercolour",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 100,
+        "water": 45,
+        "damp": 40,
+        "rim": 95,
+        "absorb": 40,
+        "spread": 40,
+        "granulation": 65,
+        "scale": 6,
+        "stain": 30,
+        "rewet": 0,
+        "softness": 40,
+        "density": 95,
+        "detail": 40,
+        "key": 75,
+        "amount": 100
+      }
+    }
+  ]
+}

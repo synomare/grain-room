@@ -17,12 +17,40 @@ export function makeWaveProfile(center=24,bandwidth=5,seed=17,size=2048){
 }
 export function periodicWave(a,t){const n=a.length,u=((t%1)+1)%1*n,i=Math.floor(u),f=u-i;return a[i]*(1-f)+a[(i+1)%n]*f;}
 export function periodicWaveSlope(a,t){const n=a.length,i=Math.floor(((t%1)+1)%1*n);return (a[(i+1)%n]-a[i])*n;}
+// Section 4.3: common phases let two directional spectra mix as amplitudes.
+// The squared angular weights and unit-power compensation are our 2D choice.
+export function makeWaveBank(band=30,crossfreq=100,crossband=100,seed=17){
+ const main=makeWaveProfile(24,1+band/7,seed);
+ if(crossfreq===100&&crossband===100)return main;
+ const cross=makeWaveProfile(24*crossfreq/100,(1+band/7)*crossband/100,seed),other=new Map(cross.terms.map(([k,a])=>[k,a]));
+ const correlation=main.terms.reduce((sum,[k,a])=>sum+a*(other.get(k)||0),0);
+ return {...main,cross,correlation};
+}
+export function waveDirections(p,bank){
+ const theta=p.angle*Math.PI/180,directions=[];
+ for(let j=0;j<p.waves;j++){
+  const angle=TAU*(j+hash(j,65,p.seed)*.8)/p.waves,aniso=p.align/100;
+  const d=[Math.cos(angle+theta),Math.sin(angle+theta),hash(j,471,p.seed),1-aniso+aniso*Math.exp(4*(Math.cos(2*angle)-1))];
+  if(bank.cross){const blend=Math.sin(angle)**2;d.push(blend,1/Math.sqrt((1-blend)**2+blend**2+2*blend*(1-blend)*bank.correlation));}
+  directions.push(d);
+ }return directions;
+}
+export function compileWaveBank(bank,directions){
+ if(!bank.cross)return bank;
+ const compiled=directions.map(([, , , ,blend=0,gain=1])=>{
+  const re=new Float64Array(bank.size),im=new Float64Array(bank.size);
+  for(let i=0;i<bank.size;i++){re[i]=(bank.re[i]*(1-blend)+bank.cross.re[i]*blend)*gain;im[i]=(bank.im[i]*(1-blend)+bank.cross.im[i]*blend)*gain;}
+  return {re,im};
+ });return {...bank,compiled};
+}
 export function waveField(profile,x,y,directions,mode=1,gradient=false){
  let re=0,im=0,nearest=Infinity,second=Infinity,owner=0,rx=0,ry=0,ix=0,iy=0,mx=0,my=0;
  for(let j=0;j<directions.length;j++){
-  const [dx,dy,shift,weight]=directions[j],t=x*dx+y*dy+shift,r=periodicWave(profile.re,t),v=periodicWave(profile.im,t);
+  const [dx,dy,shift,weight,blend=0,gain=1]=directions[j],t=x*dx+y*dy+shift;
+  const wave=profile.compiled?.[j]||profile;
+  let r=periodicWave(wave.re,t),v=periodicWave(wave.im,t),dr=gradient?periodicWaveSlope(wave.re,t):0,di=gradient?periodicWaveSlope(wave.im,t):0;
+  if(profile.cross&&!profile.compiled){r=(r*(1-blend)+periodicWave(profile.cross.re,t)*blend)*gain;v=(v*(1-blend)+periodicWave(profile.cross.im,t)*blend)*gain;if(gradient){dr=(dr*(1-blend)+periodicWaveSlope(profile.cross.re,t)*blend)*gain;di=(di*(1-blend)+periodicWaveSlope(profile.cross.im,t)*blend)*gain;}}
   re+=weight*r;im+=weight*v;
-  const dr=gradient?periodicWaveSlope(profile.re,t):0,di=gradient?periodicWaveSlope(profile.im,t):0;
   rx+=dr*weight*dx;ry+=dr*weight*dy;ix+=di*weight*dx;iy+=di*weight*dy;
   const distance=Math.abs(r);if(distance<nearest){second=nearest;nearest=distance;owner=j;mx=dr*Math.sign(r)*dx;my=dr*Math.sign(r)*dy;}else if(distance<second)second=distance;
  }
@@ -30,12 +58,7 @@ export function waveField(profile,x,y,directions,mode=1,gradient=false){
  return mode===3?[nearest,second,owner,mx,my]:[re/den,im/den,Math.atan2(im,re),rx/den,ry/den,ix/den,iy/den];
 }
 export function waveweft(a,w,h,p){
- const g=grid(a,w,h,384),photo=blur(blur(g.l,g.w,g.h,7),g.w,g.h,7),colors=p.texture<100?g.rgb.map(v=>blur(blur(v,g.w,g.h,15),g.w,g.h,15)):null,profile=makeWaveProfile(24,1+p.band/7,p.seed),directions=[];
- const theta=p.angle*Math.PI/180;
- for(let j=0;j<p.waves;j++){
-  const angle=TAU*(j+hash(j,65,p.seed)*.8)/p.waves,aniso=p.align/100;
-  directions.push([Math.cos(angle+theta),Math.sin(angle+theta),hash(j,471,p.seed),1-aniso+aniso*Math.exp(4*(Math.cos(2*angle)-1))]);
- }
+ const g=grid(a,w,h,384),photo=blur(blur(g.l,g.w,g.h,7),g.w,g.h,7),colors=p.texture<100?g.rgb.map(v=>blur(blur(v,g.w,g.h,15),g.w,g.h,15)):null,bank=makeWaveBank(p.band,p.crossfreq??100,p.crossband??100,p.seed),directions=waveDirections(p,bank),profile=compileWaveBank(bank,directions);
  const out=new Uint8ClampedArray(a.length),span=Math.max(w,h),scale=p.frequency/24,nx=p.bend/100*.14,aa=Math.max(.015,p.frequency/span);
  for(let y=0;y<h;y++)for(let x=0;x<w;x++){
   const X=(x+.5)*g.w/w-.5,Y=(y+.5)*g.h/h-.5,l=at(photo,g.w,g.h,X,Y),gx=at(photo,g.w,g.h,X+1,Y)-at(photo,g.w,g.h,X-1,Y),gy=at(photo,g.w,g.h,X,Y+1)-at(photo,g.w,g.h,X,Y-1);

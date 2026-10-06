@@ -1,0 +1,3 @@
+export const spectralTVFilters=(f,c)=>[
+ {...f('spectraltv','時刻の色層','TV RESPONSE STRATA','再構成','写真の明暗がほどける時刻から、一層を選ぶ。その層の強さを変えたり、赤と青緑で紙へ刷ったりする。',{scale:40,width:40,gain:30,view:0,reveal:45},[c('scale','選ぶ応答の時刻',0,100),c('width','時刻の幅',0,100),c('gain','選んだ層の強さ',0,250,1,'%'),c('reveal','紙へ刷る濃さ',0,100),c('view','層の表示',0,1)],true,false),spectraltv:true,research:{title:'Gilboa — Spectral Total Variation (2014)',url:'https://epubs.siam.org/doi/10.1137/130930704',note:'TVの流れから符号付きの応答を取り出す独立実装。面積平均した160px辺の輝度で72時刻を計算し、選んだ時間帯だけを変更します。尺度は大きさ・形・コントラストに依存し、物体や質感の自動分離は保証しません。写真の表示では計算外の細部と色差を保持。二色版は選んだ応答のみを描くため細部を省略します。Horesh/Gilboaの位置依存の分離面は実装していません。'}},
+];

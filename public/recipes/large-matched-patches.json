@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.37",
+  "layers": [
+    {
+      "id": "graphcut",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 320,
+        "scatter": 100,
+        "follow": 15,
+        "magnify": 110,
+        "turn": 45,
+        "refine": 6,
+        "seam": 20,
+        "feather": 50,
+        "amount": 100
+      }
+    }
+  ]
+}

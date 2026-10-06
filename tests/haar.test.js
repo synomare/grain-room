@@ -6,6 +6,7 @@ import {filters,makeLayer} from '../src/filters.js';
 import {applyFilter} from '../src/engine.js';
 import {looks} from '../src/looks.js';
 import {encodeRecipe,decodeRecipe,ENGINE_VERSION} from '../src/recipes.js';
+const historical=JSON.parse(fs.readFileSync(new URL('./v018-catalog.json',import.meta.url),'utf8'));
 const near=(a,b,e=1e-9)=>assert.ok(Math.abs(a-b)<e,`${a} != ${b}`);
 const pixels=(w,h)=>Uint8ClampedArray.from({length:w*h*4},(_,i)=>i%4===3?255:(i*19+Math.floor(i/37)*11)%256);
 const energy=a=>a.reduce((s,v)=>s+v*v,0);
@@ -32,8 +33,8 @@ test('Haar photo output is deterministic, seed sensitive, nonmutating and exact 
  Object.assign(l.params,{shift:0,split:0,turn:0,gain:100,cut:0,texture:100});assert.deepEqual(applyFilter(a,39,51,l),a);
 });
 test('0.18 catalog/assets roundtrip and every historical 0.17 effect stays compatible',()=>{
- assert.equal(ENGINE_VERSION,'0.18');assert.equal(filters.length,71);assert.equal(looks.length,87);
- for(const f of filters){const layers=[makeLayer(f.id)],j=JSON.parse(encodeRecipe(layers));assert.deepEqual(decodeRecipe(JSON.stringify(j)),layers);j.engine='0.17';if(f.haar)assert.throws(()=>decodeRecipe(JSON.stringify(j)));else assert.deepEqual(decodeRecipe(JSON.stringify(j)),layers);}
+ assert.ok(Number(ENGINE_VERSION.split('.')[1])>=18);assert.equal(historical.effects.length,71);assert.equal(historical.looks.length,87);for(const id of historical.looks)assert.ok(looks.some(l=>l.id===id));
+ for(const f of historical.effects.map(id=>filters.find(f=>f.id===id))){const layers=[makeLayer(f.id)],j=JSON.parse(encodeRecipe(layers));assert.deepEqual(decodeRecipe(JSON.stringify(j)),layers);j.engine='0.17';if(f.haar)assert.throws(()=>decodeRecipe(JSON.stringify(j)));else assert.deepEqual(decodeRecipe(JSON.stringify(j)),layers);}
  for(let n=2;n<=17;n++)assert.throws(()=>decodeRecipe(JSON.stringify({...JSON.parse(encodeRecipe([makeLayer('haar')])),engine:'0.'+n})));
  for(const l of looks.filter(l=>l.haar))assert.deepEqual(decodeRecipe(fs.readFileSync(new URL('../public/recipes/'+l.id+'.json',import.meta.url),'utf8')),l.layers);
 });

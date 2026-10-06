@@ -1,7 +1,7 @@
 {
   "app": "grain-room",
   "version": 1,
-  "engine": "0.11",
+  "engine": "0.29",
   "layers": [
     {
       "id": "softcells",
@@ -37,6 +37,8 @@
         "seed": 17,
         "frequency": 28,
         "band": 2,
+        "crossfreq": 100,
+        "crossband": 100,
         "waves": 8,
         "align": 90,
         "angle": 65,

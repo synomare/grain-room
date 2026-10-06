@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.73",
+  "layers": [
+    {
+      "id": "wovenphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 55,
+        "coverage": 82,
+        "relief": 55,
+        "weave": 1,
+        "bend": 0,
+        "shift": 12,
+        "tilt": 0,
+        "turn": 0,
+        "fit": 100,
+        "light": 80,
+        "paper": 96,
+        "lift": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+import {shockDefaults} from './shock-lines.js';
+export const shockLineFilters=(f,c)=>[
+ {...f('shocklines','育つ色筋','GROWING COLOUR GROOVES','線と面','写真の流れを拾い、明るい筋を広げ、暗い筋を削る。光と影の境目が鋭く育ち、細部が色の帯へ変わります。',shockDefaults,[c('time','育てる回数',0,64),c('scale','筋の太さ',1,16,.5),c('integration','方向を拾う広さ',1,40,.5),c('follow','輪郭へ沿う',0,100),c('turn','方向を回す',-90,90,1,'°'),c('bias','光と影の偏り',-100,100),c('softness','細部を抑える',0,100),c('amount','加工の強さ',0,100)],true,false),shocklines:true,research:{title:'Joachim Weickert (2003) — Coherence-Enhancing Shock Filters',url:'https://www.mia.uni-saarland.de/Publications/weickert-dagm03.pdf',note:'原著§2–5の明るい側の膨張・暗い側の侵食、RGB共同の構造テンソルと方向二階微分、安定なupwind更新を参照した独立翻案。元写真からSobelで方向を拾い、3回の箱平均でGaussianの2尺度を近似。固定した元写真の案内を全反復で使い、原寸RGBをstep .4のGodunov型更新で育てます。方向とLaplacianの混合、方向の回転、曲率の偏りとtanh、元色との混合は独自調整。原著の反復ごとに更新する案内、厳密なGaussian、定常状態・TV保存・指紋の接続や同じ品質は保証しません。参照も像も縮小せず全画素を使います。強い成長で細部や外形が失われ、一定の回数でも出力寸法によって見え方が変わります。原著のコード・写真・図版は製品へ取り込んでいません。'}},
+];

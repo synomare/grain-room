@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.40",
+  "layers": [
+    {
+      "id": "domaincolour",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 70,
+        "range": 90,
+        "passes": 3,
+        "method": 0,
+        "detail": 0,
+        "tone": 100,
+        "edge": 70,
+        "amount": 100
+      }
+    }
+  ]
+}

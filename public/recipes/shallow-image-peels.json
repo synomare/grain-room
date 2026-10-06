@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "curlsheet",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "pieces": 5,
+        "width": 45,
+        "length": 260,
+        "curl": 70,
+        "paper": 95,
+        "back": 95,
+        "view": 15,
+        "shadow": 45,
+        "light": 315
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "phasefold",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 90,
+        "seed": 17,
+        "scale": 7,
+        "folds": 3,
+        "phase": 0,
+        "equalize": 55,
+        "gain": 180,
+        "direction": 30,
+        "select": 0,
+        "cut": 45,
+        "view": 0
+      }
+    }
+  ]
+}

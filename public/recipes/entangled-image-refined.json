@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.77",
+  "layers": [
+    {
+      "id": "entangledphotorefined",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "density": 90,
+        "shrink": 60,
+        "distort": 85,
+        "bands": 70,
+        "writing": 70,
+        "records": 90,
+        "wires": 40,
+        "frames": 30,
+        "colour": 45,
+        "source": 15,
+        "paper": 98,
+        "ribbonVisible": 1
+      }
+    }
+  ]
+}

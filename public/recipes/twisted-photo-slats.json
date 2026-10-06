@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.75",
+  "layers": [
+    {
+      "id": "twistedphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "bands": 9,
+        "width": 100,
+        "twist": 165,
+        "waves": 1,
+        "stagger": 28,
+        "direction": 0,
+        "tilt": 28,
+        "turn": -6,
+        "fit": 94,
+        "light": 60,
+        "paper": 96,
+        "lift": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+import {domainDefaults} from './domain-colour.js';
+export const domainColourFilters=(f,c)=>[
+ {...f('domaincolour','境目の色面','BOUNDARY COLOUR PLANES','光・色','近い色を滑らかな面へまとめ、色の境目を残す。写真の細部を戻したり、面の濃淡と輪郭を調整できます。',domainDefaults,[c('size','均す広がり',0,100),c('range','境目をまたぐ',1,100),c('passes','均す回数',1,5),c('method','均し方（窓→往復）',0,1),c('detail','細部を戻す',0,250),c('tone','色面の濃淡',0,180),c('edge','境目の線',0,100),c('amount','加工の強さ',0,100)],true,false),domaincolour:true,research:{title:'Gastal & Oliveira (2011) — Domain Transform for Edge-Aware Image and Video Processing',url:'https://www.inf.ufrgs.br/~eslgastal/DomainTransform/',note:'原著§4–6のRGB差に応じて伸びる1次元座標、縮む幅の反復、Normalized ConvolutionとRecursive Filteringを参照した独立実装。原寸の全画素を横・縦に処理し、窓方式は変換座標の範囲に入る画素の平均、往復方式は隣接距離に応じた再帰を前後に行う。距離の案内は各反復で同じ元写真を使用。細部の加減、平均色を中心とした面の濃淡、面のRGB勾配による暗い線は独自翻案。縮小参照や色数制限を使わず、メモリは原寸RGBと行単位の作業領域。連続面積の積分方式・動画・完全な回転不変性・2015年の高次フィルターは実装しない。強い細部で色が飽和し、広い窓では面が角張る場合がある。原著のコード・写真・図版は製品へ取り込んでいません。'}},
+];

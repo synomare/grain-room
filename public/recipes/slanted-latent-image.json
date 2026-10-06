@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "bandmoire",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "compression": 192,
+        "repeats": 1,
+        "aperture": 1,
+        "spacing": 100,
+        "phase": 10,
+        "tilt": 0.2,
+        "soften": 100,
+        "view": 2
+      }
+    }
+  ]
+}

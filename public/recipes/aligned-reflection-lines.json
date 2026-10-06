@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.34",
+  "layers": [
+    {
+      "id": "scratchlight",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "count": 85,
+        "length": 360,
+        "width": 250,
+        "depth": 170,
+        "direction": 45,
+        "scatter": 15,
+        "coherence": 20,
+        "light": 135,
+        "tilt": 25,
+        "photo": 100,
+        "amount": 75,
+        "follow": 75
+      }
+    }
+  ]
+}

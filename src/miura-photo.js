@@ -1,0 +1,15 @@
+import{rasterRender,rasterProjection}from'./raster-relief.js';
+export const miuraDefaults={cells:7,ratio:100,angle:62,fold:42,tilt:25,turn:-8,direction:0,size:100,light:230,shade:65,paper:97,lift:0};
+// Stable forms of Schenk and Guest's unit-cell dimensions, Eqs. 1–4.
+export function miuraDimensions(a,b,angle,fold){const g=angle*Math.PI/180,t=fold*Math.PI/180,sg=Math.sin(g),cg=Math.cos(g),ct=Math.cos(t),den=Math.hypot(cg,ct*sg);return{a,b,H:a*Math.sin(t)*sg,L:a*den,S:b*ct*sg/den,V:b*cg/den};}
+export function miuraPoint(i,j,d){return[i*d.L+(j&1)*d.V,j*d.S,(i&1)*d.H];}
+export function miuraClip(poly,axis,value,keepGreater){const out=[];if(!poly.length)return out;for(let j=0;j<poly.length;j++){const a=poly[j],b=poly[(j+1)%poly.length],aa=keepGreater?a[axis]>=value:a[axis]<=value,bb=keepGreater?b[axis]>=value:b[axis]<=value;if(aa)out.push(a);if(aa!==bb){const t=(value-a[axis])/(b[axis]-a[axis]);out.push(a.map((v,k)=>v+(b[k]-v)*t));}}return out;}
+export function miuraSheet(w,h,p){const W=p.direction?h:w,H=p.direction?w:h,a=Math.max(w,h)/p.cells,b=a*p.ratio/100,d=miuraDimensions(a,b,p.angle,p.fold),flat=miuraDimensions(a,b,p.angle,0),faces=[],normal=(A,B,C)=>{const u=B.map((v,j)=>v-A[j]),v=C.map((v,j)=>v-A[j]),n=[u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]],len=Math.hypot(...n),sign=n[2]<0?-1:1;return n.map(v=>v/len*sign);};
+ for(let j=0;j<Math.ceil(H/flat.S);j++)for(let i=-Math.ceil(flat.V/a);i<Math.ceil(W/a);i++){const corners=[[i,j],[i+1,j],[i+1,j+1],[i,j+1]].map(([x,y])=>{let[X,Y,Z]=miuraPoint(x,y,d);const[U,V]=miuraPoint(x,y,flat);return p.direction?[Y,X,Z,V,U]:[X,Y,Z,U,V];}),n=normal(...corners.slice(0,3));let poly=corners;for(const[axis,value,greater]of[[3,0,true],[3,w,false],[4,0,true],[4,h,false]])poly=miuraClip(poly,axis,value,greater);if(poly.length>=3)faces.push({points:poly,normal:n,i,j});}return{faces,dimensions:d,flat};
+}
+export function miuraMesh(sheet,w,h,p){const pts=sheet.faces.flatMap(f=>f.points),bounds=[Infinity,Infinity,Infinity,-Infinity,-Infinity,-Infinity];for(const v of pts)for(let c=0;c<3;c++){bounds[c]=Math.min(bounds[c],v[c]);bounds[c+3]=Math.max(bounds[c+3],v[c]);}const centre=bounds.slice(0,3).map((v,c)=>(v+bounds[c+3])/2),v=[],ix=[],ca=Math.cos(p.turn*Math.PI/180),sa=Math.sin(p.turn*Math.PI/180),cb=Math.cos(p.tilt*Math.PI/180),sb=Math.sin(p.tilt*Math.PI/180),light=p.light*Math.PI/180,ld=[.6*Math.cos(light),.6*Math.sin(light),.8];
+ for(const face of sheet.faces){const start=v.length/6,[nx,ny,nz]=face.normal,N=[nx*ca-ny*sa,(nx*sa+ny*ca)*cb-nz*sb,(nx*sa+ny*ca)*sb+nz*cb],shade=1+(p.shade/100)*(.25+.9*Math.abs(N.reduce((s,x,c)=>s+x*ld[c],0))-1);
+  for(const[X,Y,Z,U,V]of face.points){const A=rasterProjection(X-centre[0]+w/2,Y-centre[1]+h/2,Z-centre[2],w,h,p);v.push(A[0]*p.size/100+w/2,A[1]*p.size/100+h/2,A[2],U-.5,V-.5,shade);}for(let k=1;k<face.points.length-1;k++)ix.push(start,start+k,start+k+1);
+ }return{vertices:Float64Array.from(v),indices:Uint32Array.from(ix),stride:6,faces:sheet.faces.length,bounds,centre};
+}
+export function miuraPhoto(a,w,h,p={}){const q={...miuraDefaults,...p};return rasterRender(a,w,h,miuraMesh(miuraSheet(w,h,q),w,h,q),q);}

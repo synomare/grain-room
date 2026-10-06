@@ -1,0 +1,31 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.44",
+  "layers": [
+    {
+      "id": "flowplates",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "width": 1.5,
+        "length": 5,
+        "direction": 3,
+        "iterations": 2,
+        "lines": 80,
+        "ink": 100,
+        "flatten": 25,
+        "range": 20,
+        "levels": 10,
+        "mode": 1,
+        "amount": 100
+      }
+    }
+  ]
+}

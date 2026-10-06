@@ -1,0 +1,26 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "diffusioncurves",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "detail": 65,
+        "length": 10,
+        "smooth": 20,
+        "jump": 100,
+        "paper": 45,
+        "soften": 25
+      }
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.35",
+  "layers": [
+    {
+      "id": "painterly",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 8,
+        "levels": 3,
+        "threshold": 35,
+        "length": 18,
+        "curve": 25,
+        "blur": 40,
+        "opacity": 85,
+        "jitter": 8,
+        "photo": 10,
+        "amount": 100,
+        "paper": 100,
+        "spacing": 100
+      }
+    }
+  ]
+}

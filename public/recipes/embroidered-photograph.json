@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.66",
+  "layers": [
+    {
+      "id": "embroideredphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 100,
+        "density": 100,
+        "width": 2.1,
+        "relief": 90,
+        "dye": 96,
+        "tint": 1,
+        "fill": 80,
+        "cloth": 60,
+        "open": 24,
+        "loose": 75,
+        "photo": 90,
+        "light": 315
+      }
+    }
+  ]
+}

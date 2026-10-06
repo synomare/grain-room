@@ -1,0 +1,36 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.59",
+  "layers": [
+    {
+      "id": "contextwindows",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "shape": 1,
+        "columns": 3,
+        "rows": 1,
+        "size": 65,
+        "stretch": 100,
+        "bend": 75,
+        "angle": 20,
+        "smooth": 0,
+        "detail": 100,
+        "colour": 100,
+        "ground": 0,
+        "range": 25,
+        "turn": 70,
+        "ring": 0,
+        "ringTone": 50,
+        "compare": 0
+      }
+    }
+  ]
+}

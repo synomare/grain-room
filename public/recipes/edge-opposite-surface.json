@@ -1,0 +1,34 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.57",
+  "layers": [
+    {
+      "id": "edgeownership",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "threshold": 55,
+        "smooth": 40,
+        "reach": 90,
+        "side": 1,
+        "curve": 100,
+        "shade": 85,
+        "light": 225,
+        "elevation": 45,
+        "gloss": 40,
+        "texture": 1,
+        "pitch": 26,
+        "ink": 55,
+        "angle": 30,
+        "paper": 20
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.42",
+  "layers": [
+    {
+      "id": "componentislands",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 24,
+        "balance": 0,
+        "polarity": 0,
+        "detail": 5,
+        "relief": 0,
+        "mode": 1,
+        "diagonal": 0,
+        "amount": 100
+      }
+    }
+  ]
+}

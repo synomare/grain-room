@@ -1,0 +1,37 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.58",
+  "layers": [
+    {
+      "id": "pinnedfilm",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "threshold": 70,
+        "smooth": 20,
+        "side": 1,
+        "pickX": 32,
+        "pickY": 28,
+        "pinX": 38,
+        "pinY": 20,
+        "hold": 35,
+        "pull": 130,
+        "direction": 110,
+        "gather": 40,
+        "twist": 20,
+        "lift": 90,
+        "mode": 1,
+        "paper": 94,
+        "shadow": 60,
+        "light": 315
+      }
+    }
+  ]
+}

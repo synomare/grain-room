@@ -1,0 +1,37 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.51",
+  "layers": [
+    {
+      "id": "resistfronts",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "threshold": 110,
+        "smooth": 8,
+        "resist": 80,
+        "texture": 60,
+        "scale": 60,
+        "opening": 2,
+        "lines": 8,
+        "angle": 12,
+        "period": 14,
+        "cycles": 34,
+        "first": 1,
+        "develop": 8,
+        "fix": 8,
+        "colour": 100,
+        "paper": 100,
+        "keep": 85,
+        "hold": 30
+      }
+    }
+  ]
+}

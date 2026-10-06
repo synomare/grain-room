@@ -1,0 +1,4 @@
+import{sandDefaults}from'./sand-avalanches.js';
+export const sandAvalancheFilters=(f,c)=>[
+ {...f('sandavalanches','色粒のなだれ','COLOUR AVALANCHES','物質','写真の色を粒の数に変え、多すぎる場所から周囲へ崩す。残る粒、崩れの色層、両方を重ねる表現へ。縞の数は崩れ1・重ね2で働きます。',sandDefaults,[c('load','積もる粒の量',1,128),c('steps','崩れを進める回数',0,160),c('distance','崩れが届く距離',1,12),c('loss','消える粒の量',0,12),c('power','明暗の強さ',40,240),c('jitter','最初の粒のばらつき',0,100),c('bands','色層の縞の数',1,24),c('relief','崩れの起伏',0,100),c('mode','粒0・崩れ1・重ね2',0,2),c('photo','写真を残す',0,100),c('amount','加工の強さ',0,100)],true,true),sandavalanches:true,research:{title:'Levine & Propp (2010) — What Is a Sandpile?',url:'https://faculty.uml.edu/jpropp/whatisasandpile.pdf',note:'原著の整数chip-firingとodometerを写真へ独立翻案。全画素をRGB別の粒数へ変え、各回の状態を固定して同時に四方向へ送り、画面外と追加sinkへ消える粒を数えます。移送距離は原寸の格子上で変わります。有限回で止まる表示で、必ず安定状態へ達するとはしません。色の保存・中間階調への粒・対数cosineの色層・起伏は独自。原著の群のidentityや中央への大量投入によるfractal像、臨界性、GPU実装を再現したものではなく、天然の砂の物理再現でもありません。原著のコード・図版は製品へ取り込みません。'}},
+];

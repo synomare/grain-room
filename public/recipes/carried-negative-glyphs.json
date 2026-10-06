@@ -1,0 +1,34 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.50",
+  "layers": [
+    {
+      "id": "logicglyphs",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 28,
+        "edges": 5,
+        "rule": 2,
+        "offset": 2,
+        "carry": 80,
+        "flow": 1,
+        "random": 70,
+        "yaw": 50,
+        "pitch": 40,
+        "stretch": 70,
+        "width": 5.5,
+        "mode": 2,
+        "paper": 100,
+        "lift": 30
+      }
+    }
+  ]
+}

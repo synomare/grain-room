@@ -1,0 +1,28 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.41",
+  "layers": [
+    {
+      "id": "shocklines",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "time": 24,
+        "scale": 3,
+        "integration": 10,
+        "follow": 100,
+        "turn": 0,
+        "bias": 0,
+        "softness": 25,
+        "amount": 100
+      }
+    }
+  ]
+}

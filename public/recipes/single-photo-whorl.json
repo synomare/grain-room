@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.52",
+  "layers": [
+    {
+      "id": "meromorphic",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "order": 2,
+        "poles": 1,
+        "zeroRadius": 75,
+        "zeroAngle": 30,
+        "poleRadius": 30,
+        "poleAngle": 150,
+        "zoom": 100,
+        "angle": 0,
+        "offsetX": 30,
+        "offsetY": -10,
+        "crop": 70,
+        "edge": 0,
+        "paper": 96
+      }
+    }
+  ]
+}

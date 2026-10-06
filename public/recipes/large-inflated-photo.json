@@ -1,0 +1,31 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.72",
+  "layers": [
+    {
+      "id": "puffedphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 300,
+        "boundary": 85,
+        "pressure": 140,
+        "round": 65,
+        "softness": 55,
+        "tilt": 45,
+        "turn": 8,
+        "fit": 91,
+        "light": 75,
+        "paper": 96,
+        "lift": 0
+      }
+    }
+  ]
+}

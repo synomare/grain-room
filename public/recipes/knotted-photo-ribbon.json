@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.71",
+  "layers": [
+    {
+      "id": "knottedphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "shape": 1,
+        "width": 100,
+        "depth": 65,
+        "twist": 0,
+        "roll": 15,
+        "tilt": 24,
+        "yaw": 15,
+        "turn": -20,
+        "size": 92,
+        "light": 60,
+        "paper": 97,
+        "lift": 0,
+        "repeat": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.70",
+  "layers": [
+    {
+      "id": "nestedphoto",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "ratio": 22,
+        "spin": -1,
+        "phase": 0,
+        "angle": 0,
+        "zoom": 100,
+        "centerX": 30,
+        "centerY": 60,
+        "sourceX": 50,
+        "sourceY": 50,
+        "crop": 100,
+        "round": 100,
+        "gap": 0,
+        "shade": 16,
+        "paper": 97
+      }
+    }
+  ]
+}

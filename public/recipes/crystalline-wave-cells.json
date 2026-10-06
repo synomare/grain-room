@@ -1,7 +1,7 @@
 {
   "app": "grain-room",
   "version": 1,
-  "engine": "0.11",
+  "engine": "0.29",
   "layers": [
     {
       "id": "waveweft",
@@ -16,6 +16,8 @@
         "seed": 17,
         "frequency": 8,
         "band": 2,
+        "crossfreq": 100,
+        "crossband": 100,
         "waves": 4,
         "align": 0,
         "angle": 25,

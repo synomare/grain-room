@@ -1,0 +1,30 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "contactcarry",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "width": 110,
+        "capacity": 60,
+        "pressure": 60,
+        "tooth": 50,
+        "release": 50,
+        "separate": 0,
+        "travel": 65,
+        "angle": 75,
+        "strokes": 3,
+        "protect": 0
+      }
+    }
+  ]
+}

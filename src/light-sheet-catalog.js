@@ -1,0 +1,3 @@
+export const lightSheetFilters=(f,c)=>[
+ {...f('lightsheet','揺れる光膜','WANDERING LIGHT','光・色','場所ごとに光の像が揺れ、散り、重なる。同じ光の歪みから輪郭の曲がりとぼけをつくり、原画の色を透かす。',{strength:65,scale:18,aperture:40,tilt:100,blur:20,rays:32},[c('strength','光膜の強さ',0,180),c('scale','揺らぎの広さ',4,70),c('aperture','光を集める範囲',0,100),c('tilt','像の揺れ',0,150),c('blur','光の散り',0,180),c('rays','重なる光の数',8,64)],true,true),lightsheet:true,research:{title:'Chimitt & Chan — Anisoplanatic Optical Turbulence Simulation (2023)',url:'https://arxiv.org/abs/2305.09036v1',note:'共通の256×256位相場を移動する円形開口で読み、傾き・焦点・非点・コマの7係数を同時に投影。出力画素で同じ局所位相の勾配から幾何的な光の分布を作り、原画の線形RGBを平均する独立翻案です。原著のCn²分布、全Zernike相関、波動伝播、回折PSF、実大気の再現は含みません。係数は長辺25点以下で補間。有限の光線数では強い散りに複数像が見える場合があります。位置ごとの読取り核であり全光量保存や可逆性は保証しません。'}},
+];

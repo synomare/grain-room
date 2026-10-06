@@ -1,0 +1,31 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.62",
+  "layers": [
+    {
+      "id": "transmittedfilm",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "cells": 6,
+        "scale": 140,
+        "scatter": 18,
+        "turn": 18,
+        "shape": 0,
+        "density": 90,
+        "clear": 2,
+        "exposure": 100,
+        "negative": 1,
+        "edge": 2,
+        "readout": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+export const paletteFilters=(f,c)=>[
+ {...f('paletteplates','色の分版','COLOR COMPONENTS','光・色','写真から最大6つの色の版を取り出し、ひとつだけ調色する。花脈や窓の細部を残したまま、色の役割を変える。',{component:1,position:25,hue:190,chroma:65,tone:55,replace:75,view:0},[c('component','調色する版',1,6),c('position','場所への結びつき',0,100),c('hue','置換色の色相',0,360,1,'°'),c('chroma','置換色の鮮やかさ',0,100),c('tone','置換色の明るさ',0,100),c('replace','置き換える量',0,100),c('view','版の表示',0,1)],true,false),palette:true,research:{title:'Tan, Echevarria & Gingold — Palette-based decomposition (2018)',url:'https://arxiv.org/abs/1804.01225',note:'色と位置から混合成分を持つ考え方を独自に応用。原著の5次元凸包／Delaunay分割ではなく、RGBパレットの抽出と制約付きRGBXY近似を使用。192px辺の解析で重みを決め、置換時は固定。元の細部を残差として保持します。顔料や物体の分離は保証せず、強い調色は色域外の値を切り詰めます。版は有彩色の色相順、無彩色は最後。'}},
+];

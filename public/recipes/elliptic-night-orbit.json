@@ -1,0 +1,35 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.55",
+  "layers": [
+    {
+      "id": "ellipticorbits",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "vertices": 37,
+        "turns": 8,
+        "aspect": 80,
+        "families": 1,
+        "phase": 13,
+        "rotation": 24,
+        "scale": 95,
+        "centerX": 50,
+        "centerY": 50,
+        "width": 8,
+        "surface": 0,
+        "mode": 2,
+        "paper": 3,
+        "keep": 25,
+        "ink": 100
+      }
+    }
+  ]
+}

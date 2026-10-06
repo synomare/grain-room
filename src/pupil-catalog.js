@@ -1,0 +1,3 @@
+export const pupilFilters=(f,c)=>[
+ {...f('pupilpsf','瞳の残光','PUPIL LIGHT','光・色','光の点を、片側へ尾を引くぼけに変える。縦横の尾と焦点を調整し、輪郭の周りへ柔らかな光を残す。',{spread:45,tailX:18,tailY:-12,focus:4,astig:3,aperture:100,light:75},[c('spread','光の広がり',0,90),c('tailX','横の尾',-35,35),c('tailY','縦の尾',-35,35),c('focus','焦点のずれ',-20,20),c('astig','縦横の焦点差',-15,15),c('aperture','開口の幅',40,100),c('light','残光の量',0,100)],true,false),pupil:true,research:{title:'Dowski & Cathey — Wave-front coding (1995)',url:'https://graphics.stanford.edu/courses/cs448a-06-winter/dowski-wavefront-coding-optics95.pdf',note:'矩形の瞳と立方・二次位相から点像を作る独自の応用。線形RGBの強度へ同じ核を適用。有限の裾を切って正規化し、端は鏡映。原著の復元処理や被写界深度拡大、写真の再合焦を再現しません。全画面で同じぼけがかかり、細部は失われます。'}},
+];

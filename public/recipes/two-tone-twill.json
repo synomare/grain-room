@@ -1,0 +1,32 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.38",
+  "layers": [
+    {
+      "id": "wovencloth",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 16,
+        "weave": 1,
+        "angle": 25,
+        "coverage": 90,
+        "crimp": 80,
+        "gloss": 65,
+        "roughness": 30,
+        "light": 110,
+        "elevation": 40,
+        "dye": 80,
+        "split": 85,
+        "amount": 100
+      }
+    }
+  ]
+}

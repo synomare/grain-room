@@ -1,0 +1,3 @@
+export const diffusionCurveFilters=(f,c)=>[
+ {...f('diffusioncurves','境界の色面','DIFFUSION COLOR FIELDS','再構成','輪郭の両側の色から、写真をなめらかな色面へ解き直す。色差を反転したり、片側を白へ寄せたりできる。',{detail:65,length:10,smooth:20,jump:100,paper:0,soften:20},[c('detail','拾う境界の細かさ',0,100),c('length','短い境界を省く',0,100),c('smooth','境界の形をまとめる',0,100),c('jump','両側の色差',-100,150,1,'%'),c('paper','片側を白へ寄せる',0,100),c('soften','色面の縁をぼかす',0,100)],true,false),diffusioncurves:true,research:{title:'Orzan et al. — Diffusion Curves (2008)',url:'https://doi.org/10.1145/1360612.1360691',note:'曲線の左右の色と不連続な勾配からRGBを再構成する独立実装。解析は長辺320px、再構成は512px、出力へ補間します。単一尺度のRGB境界抽出と丸めた折れ線を使い、多尺度Bezierフィット、可変ぼかし場、逆問題の最適化は実装していません。白へ寄せる側は各境界の平均輝度で選択し、物体を分離しません。内部の弱い陰影や細部は省略され、交差と細い形には誤差が残ります。'}},
+];

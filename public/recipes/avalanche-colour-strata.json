@@ -1,0 +1,31 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.46",
+  "layers": [
+    {
+      "id": "sandavalanches",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "load": 48,
+        "steps": 64,
+        "distance": 6,
+        "loss": 0,
+        "power": 110,
+        "jitter": 15,
+        "bands": 12,
+        "relief": 20,
+        "mode": 1,
+        "photo": 40,
+        "amount": 100
+      }
+    }
+  ]
+}

@@ -9,7 +9,7 @@ export function createRenderer({latestOnly=false}={}){
   worker?.terminate();worker=null;for(const job of jobs.values()){clearTimeout(job.timer);job.reject(new Error(message));}jobs.clear();
  }
  return {
-  render(image,layers,maxEdge){
+  render(image,layers,maxEdge,resources={}){
    if(disposed)return Promise.reject(new Error('処理を終了しました'));
    if(latestOnly&&jobs.size)cancel('新しい設定で処理します');
    if(!worker)start();
@@ -18,9 +18,14 @@ export function createRenderer({latestOnly=false}={}){
    const canvas=document.createElement('canvas');canvas.width=width;canvas.height=height;
    const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.fillStyle='#fff';ctx.fillRect(0,0,width,height);ctx.drawImage(image,0,0,width,height);
    const rgba=ctx.getImageData(0,0,width,height).data.buffer;
+   let near=null;
+   if(resources.nearImage&&layers.some(l=>l.id==='hybridimage')){
+    const source=resources.nearImage,edge=resources.nearEdge||maxEdge,scaleNear=Math.min(1,edge/Math.max(source.width,source.height)),nw=Math.max(1,Math.round(source.width*scaleNear)),nh=Math.max(1,Math.round(source.height*scaleNear));
+    const nc=document.createElement('canvas');nc.width=nw;nc.height=nh;const nctx=nc.getContext('2d',{willReadFrequently:true});nctx.imageSmoothingEnabled=true;nctx.imageSmoothingQuality='high';nctx.fillStyle='#fff';nctx.fillRect(0,0,nw,nh);nctx.drawImage(source,0,0,nw,nh);near={rgba:nctx.getImageData(0,0,nw,nh).data.buffer,width:nw,height:nh};
+   }
    return new Promise((resolve,reject)=>{
     const id=++seq,timer=setTimeout(()=>cancel('処理に時間がかかっています。加工の数か書き出しサイズを減らしてください。'),120000);
-    jobs.set(id,{resolve,reject,timer});worker.postMessage({id,rgba,width,height,layers},[rgba]);
+    jobs.set(id,{resolve,reject,timer});worker.postMessage({id,rgba,width,height,layers,...(near?{near}:{})},near?[rgba,near.rgba]:[rgba]);
    });
   },
   dispose(){disposed=true;cancel('処理を終了しました');}

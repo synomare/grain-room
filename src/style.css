@@ -24,3 +24,7 @@ details{border-top:1px solid var(--line);font-size:12px;line-height:1.8}summary{
 @media(hover:hover){.edge-trigger:hover:not(:disabled){background:#ffffffe0}.icon-button:active,.tool-actions button:active,.variation-actions button:active{transform:scale(.97)}}
 
 .preview-quality{display:flex;justify-content:space-between;gap:12px;font-size:10px;color:var(--muted);margin:9px 6px 0;line-height:1.6}.canvas-holder canvas{image-rendering:auto}
+
+.glyph-character-input{display:flex;flex-direction:column;gap:8px;margin:14px 0}.glyph-character-input textarea{box-sizing:border-box;width:100%;resize:vertical;min-height:72px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.45);color:inherit;font:inherit;letter-spacing:.12em}.glyph-character-input .hint{font-weight:400;letter-spacing:0}
+
+.glyph-alphabet button{width:auto;flex:1;white-space:nowrap;padding:8px 4px}.glyph-alphabet button:first-child{flex:1.25}.glyph-alphabet button:last-child{flex:1.15}

@@ -1,0 +1,33 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.53",
+  "layers": [
+    {
+      "id": "polarizedpair",
+      "params": {
+        "brightness": 0,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "mapping": 0,
+        "angle": 22.5,
+        "gate": 90,
+        "axes": 45,
+        "first": 100,
+        "second": 100,
+        "bias": 0,
+        "partner": 0,
+        "offsetX": 0,
+        "offsetY": 0,
+        "share": 0,
+        "order": 0,
+        "keep": 0
+      }
+    }
+  ]
+}

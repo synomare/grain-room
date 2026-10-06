@@ -1,0 +1,29 @@
+{
+  "app": "grain-room",
+  "version": 1,
+  "engine": "0.29",
+  "layers": [
+    {
+      "id": "graphplates",
+      "params": {
+        "brightness": 18,
+        "contrast": 100,
+        "grain": 0,
+        "invert": false,
+        "colorMode": "color",
+        "saturation": 100,
+        "mix": 100,
+        "seed": 17,
+        "size": 12,
+        "adapt": 70,
+        "diffusion": 40,
+        "detail": 100,
+        "round": 85,
+        "dot": 90,
+        "tint": 0,
+        "hue": 225,
+        "paper": 40
+      }
+    }
+  ]
+}

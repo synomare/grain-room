@@ -1,3 +1,60 @@
+import {entangledPhotoRefinedFilters} from './entangled-photo-refined-catalog.js';
+import {entangledMatterFilters} from './entangled-matter-catalog.js';
+import {twistedPhotoFilters} from './twisted-photo-catalog.js';
+import {fanPhotoFilters} from './fan-photo-catalog.js';
+import {wovenPhotoFilters} from './woven-photo-catalog.js';
+import {puffedPhotoFilters} from './puffed-photo-catalog.js';
+import {knottedPhotoFilters} from './knotted-photo-catalog.js';
+import {nestedPhotoFilters} from './nested-photo-catalog.js';
+import {sweptPhotoFilters} from './swept-photo-catalog.js';
+import {entangledPhotoFilters} from './entangled-photo-catalog.js';
+import {colourPeelFilters} from './colour-peel-catalog.js';
+import {embroideryFilters} from './embroidered-photo-catalog.js';
+import {photoMirrorFilters} from './photo-mirrors-catalog.js';
+import {miuraPhotoFilters} from './miura-photo-catalog.js';
+import {transmittedFilmFilters} from './transmitted-film-catalog.js';
+import {rasterReliefFilters} from './raster-relief-catalog.js';
+import {hybridImageFilters} from './hybrid-image-catalog.js';
+import {contextWindowFilters} from './context-windows-catalog.js';
+import {pinnedFilmFilters} from './pinned-film-catalog.js';
+import {edgeOwnershipFilters} from './edge-ownership-catalog.js';
+import {heatStitchFilters} from './heat-stitches-catalog.js';
+import {ellipticOrbitFilters} from './elliptic-orbits-catalog.js';
+import {addressFilters} from './address-records-catalog.js';
+import {polarizedPairFilters} from './polarized-pair-catalog.js';
+import {meromorphicFilters} from './meromorphic-photo-catalog.js';
+import {resistFrontFilters} from './resist-fronts-catalog.js';
+import {logicGlyphFilters} from './logic-glyphs-catalog.js';
+import {closedRouteFilters} from './closed-route-catalog.js';
+import {stereoReliefFilters} from './stereo-relief-catalog.js';
+import {researchGraphicsFilters} from './research-graphics-catalog.js';
+import {sandAvalancheFilters} from './sand-avalanches-catalog.js';
+import {lbgDotFilters} from './lbg-dots-catalog.js';
+import {flowPlateFilters} from './flow-plates-catalog.js';
+import {flockThreadFilters} from './flock-threads-catalog.js';
+import {componentIslandFilters} from './component-islands-catalog.js';
+import {shockLineFilters} from './shock-lines-catalog.js';
+import {domainColourFilters} from './domain-colour-catalog.js';
+import {seamFoldFilters} from './seam-fold-catalog.js';
+import {wovenClothFilters} from './woven-cloth-catalog.js';
+import {graphcutFilters} from './graphcut-catalog.js';
+import {watercolourFilters} from './watercolour-catalog.js';
+import {painterlyFilters} from './painterly-catalog.js';
+import {scratchLightFilters} from './scratch-light-catalog.js';
+import {speckleFilters} from './speckle-catalog.js';
+import {glyphContourFilters} from './glyph-contours-catalog.js';
+import {lightSheetFilters} from './light-sheet-catalog.js';
+import {jointTextureFilters} from './joint-texture-catalog.js';
+import {monogenicFilters} from './monogenic-catalog.js';
+import {graphPlateFilters} from './graph-regions-catalog.js';
+import {curlSheetFilters} from './curl-sheet-catalog.js';
+import {bandMoireFilters} from './band-moire-catalog.js';
+import {contactFilters} from './contact-catalog.js';
+import {diffusionCurveFilters} from './diffusion-curves-catalog.js';
+import {spectralTVFilters} from './spectral-tv-catalog.js';
+import {paletteFilters} from './palette-catalog.js';
+import {pupilFilters} from './pupil-catalog.js';
+import {artisticScreenFilters} from './artistic-screen-catalog.js';
 import {haarFilters} from './haar-catalog.js';
 import {radonFilters} from './radon-catalog.js';
 import {newtonFilters} from './newton-catalog.js';
@@ -19,6 +76,63 @@ const c=(key,label,min,max,step=1,suffix='')=>[key,label,min,max,step,suffix];
 const f=(id,name,en,group,description,defaults={},controls=[],featured=false,random=false)=>({id,name,en,group,description,defaults:{...common,...defaults},controls,featured,random});
 export const groups=['線と面','再構成','物質','研究室','すべて','注目','印刷','流動','構造','光・色','記号'];
 export const filters=[
+ ...entangledPhotoRefinedFilters(f,c),
+ ...entangledMatterFilters(f,c),
+ ...twistedPhotoFilters(f,c),
+ ...fanPhotoFilters(f,c),
+ ...wovenPhotoFilters(f,c),
+ ...puffedPhotoFilters(f,c),
+ ...knottedPhotoFilters(f,c),
+ ...nestedPhotoFilters(f,c),
+ ...sweptPhotoFilters(f,c),
+ ...entangledPhotoFilters(f,c),
+ ...colourPeelFilters(f,c),
+ ...embroideryFilters(f,c),
+ ...photoMirrorFilters(f,c),
+ ...miuraPhotoFilters(f,c),
+ ...transmittedFilmFilters(f,c),
+ ...rasterReliefFilters(f,c),
+ ...hybridImageFilters(f,c),
+ ...contextWindowFilters(f,c),
+ ...pinnedFilmFilters(f,c),
+ ...edgeOwnershipFilters(f,c),
+ ...heatStitchFilters(f,c),
+ ...ellipticOrbitFilters(f,c),
+ ...addressFilters(f,c),
+ ...polarizedPairFilters(f,c),
+ ...meromorphicFilters(f,c),
+ ...resistFrontFilters(f,c),
+ ...logicGlyphFilters(f,c),
+ ...closedRouteFilters(f,c),
+ ...stereoReliefFilters(f,c),
+...researchGraphicsFilters(f,c),
+...sandAvalancheFilters(f,c),
+...lbgDotFilters(f,c),
+...flowPlateFilters(f,c),
+...flockThreadFilters(f,c),
+...componentIslandFilters(f,c),
+...shockLineFilters(f,c),
+...domainColourFilters(f,c),
+...seamFoldFilters(f,c),
+...wovenClothFilters(f,c),
+...graphcutFilters(f,c),
+...watercolourFilters(f,c),
+...painterlyFilters(f,c),
+...scratchLightFilters(f,c),
+...speckleFilters(f,c),
+...glyphContourFilters(f,c),
+...lightSheetFilters(f,c),
+...jointTextureFilters(f,c),
+...monogenicFilters(f,c),
+...graphPlateFilters(f,c),
+...curlSheetFilters(f,c),
+...bandMoireFilters(f,c),
+...contactFilters(f,c),
+...diffusionCurveFilters(f,c),
+...spectralTVFilters(f,c),
+...paletteFilters(f,c),
+...pupilFilters(f,c),
+...artisticScreenFilters(f,c),
 ...haarFilters(f,c),
 ...radonFilters(f,c),
 ...newtonFilters(f,c),
